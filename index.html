@@ -1,0 +1,1796 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover"/>
+<meta name="apple-mobile-web-app-capable" content="yes"/>
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"/>
+<meta name="apple-mobile-web-app-title" content="Qadr Duas"/>
+<meta name="mobile-web-app-capable" content="yes"/>
+<meta name="theme-color" content="#0a1a0f"/>
+<meta name="description" content="128 du'as for the Muslimah becoming her best self — Deen, Mind, Heart, Body, Rizq, Growth, Marriage, Children, Akhira & Ummah. By ummazrahcreatives."/>
+<title>Qadr Du'as · ummazrahcreatives</title>
+
+<!-- PWA Manifest inline -->
+<script>
+const manifestData = {
+  name: "Qadr Du'as by ummazrahcreatives",
+  short_name: "Qadr Du'as",
+  description: "28 du'as for self-growth, healing & life on Laylatul Qadr",
+  start_url: "./",
+  display: "standalone",
+  background_color: "#0a1a0f",
+  theme_color: "#0a1a0f",
+  orientation: "portrait",
+  icons: [
+    { src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 192 192'%3E%3Crect width='192' height='192' rx='40' fill='%230a1a0f'/%3E%3Ctext x='96' y='130' text-anchor='middle' font-size='110'%3E🌙%3C/text%3E%3C/svg%3E", sizes: "192x192", type: "image/svg+xml" },
+    { src: "data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 512 512'%3E%3Crect width='512' height='512' rx='80' fill='%230a1a0f'/%3E%3Ctext x='256' y='340' text-anchor='middle' font-size='290'%3E🌙%3C/text%3E%3C/svg%3E", sizes: "512x512", type: "image/svg+xml" }
+  ]
+};
+const blob = new Blob([JSON.stringify(manifestData)], {type:'application/json'});
+const manifestURL = URL.createObjectURL(blob);
+document.write('<link rel="manifest" href="' + manifestURL + '"/>');
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Cormorant:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Scheherazade+New:wght@400;700&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet"/>
+
+<style>
+/* ── DARK MODE (default) ── */
+:root {
+  --bg: #060e08;
+  --bg2: #0a1a0f;
+  --surface: #0f2014;
+  --surface2: #162b1c;
+  --surface3: #1c3523;
+  --gold: #c8a84b;
+  --gold-light: #e5c96e;
+  --gold-dim: rgba(200,168,75,0.12);
+  --emerald: #2d7a4f;
+  --emerald-light: #4aaa72;
+  --emerald-dim: rgba(45,122,79,0.2);
+  --cream: #f2e8d0;
+  --muted: #6b8f74;
+  --border: rgba(200,168,75,0.13);
+  --border-em: rgba(45,122,79,0.25);
+  --shadow: rgba(0,0,0,0.3);
+  --safe-top: env(safe-area-inset-top, 0px);
+  --safe-bot: env(safe-area-inset-bottom, 0px);
+}
+
+/* ── LIGHT MODE ── */
+:root.light {
+  --bg: #f7f3eb;
+  --bg2: #efe9dc;
+  --surface: #ffffff;
+  --surface2: #f2ece0;
+  --surface3: #e8dfc8;
+  --gold: #9a7520;
+  --gold-light: #7a5c10;
+  --gold-dim: rgba(154,117,32,0.1);
+  --emerald: #1f6b3e;
+  --emerald-light: #1a5533;
+  --emerald-dim: rgba(31,107,62,0.1);
+  --cream: #1a1a1a;
+  --muted: #6b7c6b;
+  --border: rgba(154,117,32,0.18);
+  --border-em: rgba(31,107,62,0.2);
+  --shadow: rgba(0,0,0,0.08);
+}
+* { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+body {
+  background: var(--bg);
+  font-family: 'Nunito', sans-serif;
+  color: var(--cream);
+  min-height: 100vh;
+  min-height: 100dvh;
+  overflow-x: hidden;
+  padding-top: var(--safe-top);
+  padding-bottom: var(--safe-bot);
+  transition: background 0.4s ease, color 0.4s ease;
+}
+
+/* ── THEME TOGGLE ── */
+.theme-toggle {
+  position: fixed; top: calc(1rem + var(--safe-top)); right: 1rem;
+  z-index: 300; width: 44px; height: 44px; border-radius: 50%;
+  background: var(--surface2); border: 1px solid var(--border);
+  display: flex; align-items: center; justify-content: center;
+  cursor: pointer; font-size: 1.2rem;
+  box-shadow: 0 2px 12px var(--shadow);
+  transition: all 0.3s ease;
+  -webkit-tap-highlight-color: transparent;
+}
+.theme-toggle:active { transform: scale(0.92); }
+
+/* ── SPLASH SCREEN ── */
+#splash {
+  position: fixed; inset: 0; z-index: 1000;
+  background: var(--bg);
+  display: flex; flex-direction: column;
+  align-items: center; justify-content: center;
+  text-align: center; padding: 2rem;
+  transition: opacity 0.7s ease, transform 0.7s ease;
+}
+#splash.hide { opacity: 0; transform: scale(1.05); pointer-events: none; }
+.splash-moon {
+  font-size: 5rem; margin-bottom: 1.5rem;
+  animation: splashFloat 2s ease-in-out infinite;
+  filter: drop-shadow(0 0 30px rgba(200,168,75,0.5));
+}
+.splash-brand {
+  font-family: 'Nunito', sans-serif;
+  font-size: 0.7rem; letter-spacing: 0.3em;
+  text-transform: uppercase; color: var(--emerald-light);
+  margin-bottom: 0.6rem;
+}
+.splash-title {
+  font-family: 'Scheherazade New', serif;
+  font-size: 2.8rem; color: var(--gold-light);
+  line-height: 1.2; margin-bottom: 0.4rem;
+  text-shadow: 0 0 40px rgba(200,168,75,0.4);
+}
+.splash-sub {
+  font-size: 0.85rem; color: var(--muted);
+  letter-spacing: 0.12em; text-transform: uppercase;
+  margin-bottom: 2.5rem;
+}
+.splash-divider {
+  width: 60px; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  margin: 0 auto 2rem;
+}
+.splash-by {
+  font-size: 0.78rem; color: var(--muted);
+  letter-spacing: 0.08em;
+}
+.splash-by span { color: var(--gold); font-weight: 400; }
+.splash-loader {
+  position: absolute; bottom: 3rem; left: 50%;
+  transform: translateX(-50%);
+  display: flex; gap: 6px;
+}
+.loader-dot {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: var(--emerald-light); opacity: 0.3;
+  animation: loaderPulse 1.2s ease-in-out infinite;
+}
+.loader-dot:nth-child(2) { animation-delay: 0.2s; }
+.loader-dot:nth-child(3) { animation-delay: 0.4s; }
+
+/* ── GEOMETRIC BG PATTERN ── */
+.geo-bg {
+  position: fixed; inset: 0; z-index: 0; pointer-events: none; overflow: hidden;
+}
+.geo-bg svg { position: absolute; opacity: 0.04; }
+.geo-top { top: -100px; right: -100px; width: 500px; height: 500px; }
+.geo-bot { bottom: -150px; left: -100px; width: 400px; height: 400px; }
+.orb {
+  position: absolute; border-radius: 50%;
+  filter: blur(100px); pointer-events: none;
+}
+.orb1 { width: 350px; height: 350px; background: radial-gradient(circle, rgba(45,122,79,0.18), transparent); top: -80px; right: -80px; animation: orbDrift 18s ease-in-out infinite; }
+.orb2 { width: 280px; height: 280px; background: radial-gradient(circle, rgba(200,168,75,0.1), transparent); bottom: 100px; left: -60px; animation: orbDrift 22s ease-in-out infinite reverse; }
+.orb3 { width: 200px; height: 200px; background: radial-gradient(circle, rgba(45,122,79,0.1), transparent); top: 40%; left: 40%; animation: orbDrift 15s ease-in-out infinite 5s; }
+
+/* ── INSTALL BANNER ── */
+#install-banner {
+  position: fixed; top: 0; left: 0; right: 0; z-index: 500;
+  background: linear-gradient(135deg, var(--surface2), var(--surface3));
+  border-bottom: 1px solid var(--border-em);
+  padding: 0.75rem 1rem;
+  display: none; align-items: center; gap: 0.75rem;
+  padding-top: calc(0.75rem + var(--safe-top));
+  animation: slideDown 0.4s ease;
+}
+#install-banner.visible { display: flex; }
+.install-icon { font-size: 1.6rem; flex-shrink: 0; }
+.install-text { flex: 1 }
+.install-text strong { display: block; font-size: 0.9rem; color: var(--cream); font-family: 'Cormorant', serif; }
+.install-text span { font-size: 0.75rem; color: var(--muted); }
+.install-btn {
+  padding: 0.45rem 1rem; border-radius: 99px;
+  background: linear-gradient(135deg, var(--emerald), #1f5c38);
+  border: none; color: #e8f5ee; font-size: 0.8rem;
+  font-family: 'Nunito', sans-serif; cursor: pointer;
+  white-space: nowrap; font-weight: 700; flex-shrink: 0;
+}
+.install-close {
+  background: none; border: none; color: var(--muted);
+  font-size: 1.2rem; cursor: pointer; flex-shrink: 0; padding: 0.2rem;
+}
+
+/* ── HEADER ── */
+.app-header {
+  position: relative; z-index: 10;
+  padding: 2rem 1.25rem 1rem;
+  text-align: center;
+}
+.brand-chip {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  padding: 0.3rem 0.85rem; border-radius: 99px;
+  border: 1px solid var(--border-em);
+  background: var(--emerald-dim);
+  font-size: 0.65rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--emerald-light);
+  margin-bottom: 1.25rem; cursor: pointer;
+  text-decoration: none;
+}
+.brand-chip:hover { border-color: var(--emerald-light); }
+.header-moon {
+  font-size: 3rem; display: block; margin-bottom: 0.75rem;
+  animation: floatMoon 5s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(200,168,75,0.45));
+}
+.header-arabic {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.8rem, 6vw, 2.8rem);
+  color: var(--gold-light); line-height: 1.3; margin-bottom: 0.25rem;
+  text-shadow: 0 0 30px rgba(200,168,75,0.25);
+}
+.header-eng {
+  font-size: 0.72rem; letter-spacing: 0.22em;
+  text-transform: uppercase; color: var(--muted);
+  font-weight: 300; margin-bottom: 0.85rem;
+}
+.header-quote {
+  font-family: 'Cormorant', serif;
+  font-style: italic; font-size: clamp(0.88rem, 2.2vw, 1rem);
+  color: var(--gold); opacity: 0.75; max-width: 340px;
+  margin: 0 auto; line-height: 1.7;
+}
+
+/* ── STATS ── */
+.stats-row {
+  position: relative; z-index: 10;
+  display: grid; grid-template-columns: repeat(3,1fr);
+  gap: 0.6rem; padding: 0 1.25rem; margin-bottom: 1.25rem;
+  max-width: 480px; margin-left: auto; margin-right: auto;
+}
+.stat-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px; padding: 0.8rem 0.5rem;
+  text-align: center;
+}
+.stat-n {
+  font-family: 'Cormorant', serif;
+  font-size: 1.6rem; font-weight: 700;
+  color: var(--gold); line-height: 1;
+}
+.stat-l {
+  font-size: 0.62rem; color: var(--muted);
+  letter-spacing: 0.08em; text-transform: uppercase;
+  margin-top: 0.2rem; font-weight: 300;
+}
+.prog-wrap {
+  position: relative; z-index: 10;
+  padding: 0 1.25rem; margin-bottom: 1.5rem;
+  max-width: 480px; margin-left: auto; margin-right: auto;
+}
+.prog-track {
+  height: 3px; background: rgba(255,255,255,0.05);
+  border-radius: 99px; overflow: visible; position: relative;
+}
+.prog-fill {
+  height: 100%;
+  background: linear-gradient(90deg, var(--emerald), var(--gold-light));
+  border-radius: 99px;
+  transition: width 0.7s cubic-bezier(.4,0,.2,1);
+  position: relative;
+}
+.prog-fill::after {
+  content: ''; position: absolute; right: -4px; top: -4px;
+  width: 11px; height: 11px; background: var(--gold-light);
+  border-radius: 50%; box-shadow: 0 0 8px rgba(200,168,75,0.8);
+  display: var(--prog-dot, none);
+}
+
+/* ── SEARCH ── */
+.search-wrap {
+  position: relative; z-index: 10;
+  padding: 0 1.25rem; margin-bottom: 1rem;
+  max-width: 480px; margin-left: auto; margin-right: auto;
+}
+.search-box {
+  width: 100%; padding: 0.75rem 1rem 0.75rem 2.7rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 14px; color: var(--cream);
+  font-family: 'Nunito', sans-serif; font-size: 0.9rem;
+  outline: none; transition: border-color 0.2s;
+}
+.search-box:focus { border-color: rgba(200,168,75,0.35); }
+.search-box::placeholder { color: var(--muted); }
+.search-ico {
+  position: absolute; left: 2.1rem; top: 50%;
+  transform: translateY(-50%); color: var(--muted); font-size: 0.9rem;
+  pointer-events: none;
+}
+
+/* ── CATEGORY TABS ── */
+.cats-wrap {
+  position: relative; z-index: 10;
+  padding: 0 0 1rem;
+}
+.cats-scroll {
+  display: flex; gap: 0.45rem; overflow-x: auto;
+  padding: 0.2rem 1.25rem;
+  scrollbar-width: none; -webkit-overflow-scrolling: touch;
+}
+.cats-scroll::-webkit-scrollbar { display: none; }
+.cat-pill {
+  flex-shrink: 0; padding: 0.42rem 1rem;
+  border-radius: 99px; border: 1px solid var(--border);
+  background: transparent; color: var(--muted);
+  font-family: 'Nunito', sans-serif; font-size: 0.82rem;
+  cursor: pointer; transition: all 0.22s; white-space: nowrap;
+  font-weight: 300;
+}
+.cat-pill:hover { border-color: var(--border-em); color: var(--cream); }
+.cat-pill.active {
+  background: linear-gradient(135deg, var(--emerald), #1f5c38);
+  border-color: transparent; color: #e8f5ee; font-weight: 700;
+}
+.cat-pill .cnt { font-size: 0.68rem; opacity: 0.6; margin-left: 0.2rem; }
+
+/* ── SECTION DIVIDER ── */
+.sec-div {
+  position: relative; z-index: 10;
+  display: flex; align-items: center; gap: 0.75rem;
+  padding: 0 1.25rem; margin-bottom: 1rem;
+}
+.sec-div::before, .sec-div::after {
+  content: ''; flex: 1; height: 1px; background: var(--border);
+}
+.sec-div-text {
+  font-size: 0.65rem; letter-spacing: 0.15em;
+  text-transform: uppercase; color: var(--muted);
+  white-space: nowrap; font-weight: 300;
+}
+
+/* ── GRID ── */
+.grid {
+  position: relative; z-index: 10;
+  padding: 0 1rem 1.5rem;
+  display: flex; flex-direction: column; gap: 0.9rem;
+  max-width: 540px; margin: 0 auto;
+}
+
+/* ── DUA CARD ── */
+.dcard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 18px; padding: 1.25rem;
+  cursor: default; position: relative; overflow: hidden;
+  transition: border-color 0.3s, transform 0.2s;
+  animation: cardIn 0.45s ease both;
+}
+.dcard::before {
+  content: ''; position: absolute; inset: 0; opacity: 0;
+  transition: opacity 0.3s; border-radius: 18px;
+  background: linear-gradient(135deg, var(--emerald-dim), transparent);
+}
+.dcard.done { border-color: rgba(74,170,114,0.3); }
+.dcard.done::before { opacity: 1; }
+.dcard-glow {
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(90deg, transparent, var(--emerald-light), transparent);
+  opacity: 0; transition: opacity 0.3s;
+}
+.dcard.done .dcard-glow { opacity: 1; }
+
+/* card top row */
+.dcard-top {
+  display: flex; justify-content: space-between;
+  align-items: flex-start; margin-bottom: 0.9rem; gap: 0.75rem;
+}
+.dcard-badge {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  padding: 0.22rem 0.65rem; border-radius: 99px;
+  font-size: 0.65rem; letter-spacing: 0.06em;
+  text-transform: uppercase; font-weight: 700;
+  border: 1px solid; flex-shrink: 0;
+}
+.dcard-growth {
+  font-size: 0.68rem; color: var(--muted);
+  margin-top: 0.25rem; font-weight: 300;
+}
+/* check button */
+.check-btn {
+  width: 32px; height: 32px; border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.1);
+  background: transparent; display: flex;
+  align-items: center; justify-content: center;
+  cursor: pointer; flex-shrink: 0;
+  transition: all 0.25s; position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+.check-btn:active { transform: scale(0.9); }
+.check-btn.done {
+  background: linear-gradient(135deg, var(--emerald), #1f5c38);
+  border-color: transparent;
+}
+.check-icon { display: none; color: #e8f5ee; font-size: 0.85rem; }
+.check-btn.done .check-icon { display: block; animation: checkPop 0.3s cubic-bezier(.4,0,.2,1); }
+.pulse-ring {
+  position: absolute; inset: -5px; border-radius: 50%;
+  border: 2px solid var(--emerald-light);
+  animation: pulseRing 0.7s ease-out forwards; pointer-events: none;
+}
+
+/* arabic */
+.dcard-arabic {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.1rem, 4vw, 1.45rem);
+  line-height: 2; color: var(--gold-light);
+  direction: rtl; text-align: right; margin-bottom: 0.6rem;
+}
+.dcard-translit {
+  font-style: italic; font-size: 0.8rem;
+  color: var(--muted); line-height: 1.6; margin-bottom: 0.6rem;
+  font-family: 'Cormorant', serif;
+}
+.dcard-hr { height: 1px; background: var(--border); margin-bottom: 0.7rem; }
+.dcard-meaning {
+  font-size: 0.9rem; line-height: 1.75;
+  color: var(--cream); opacity: 0.88; font-weight: 300;
+}
+.dcard-pill {
+  display: inline-flex; align-items: center; gap: 0.3rem;
+  margin-top: 0.8rem; padding: 0.22rem 0.65rem;
+  border-radius: 99px; font-size: 0.68rem;
+  font-weight: 300; border: 1px solid;
+  background: rgba(255,255,255,0.02); letter-spacing: 0.03em;
+}
+/* reflection */
+.reflect-toggle {
+  display: flex; align-items: center; gap: 0.35rem;
+  margin-top: 0.75rem; background: none; border: none;
+  color: var(--muted); font-size: 0.78rem; cursor: pointer;
+  font-family: 'Nunito', sans-serif; transition: color 0.2s;
+  padding: 0; font-weight: 300;
+}
+.reflect-toggle:hover { color: var(--gold); }
+.reflect-box {
+  max-height: 0; overflow: hidden; opacity: 0;
+  transition: max-height 0.4s ease, opacity 0.3s ease, margin 0.3s;
+}
+.reflect-box.open { max-height: 300px; opacity: 1; margin-top: 0.75rem; }
+.reflect-inner {
+  background: var(--surface2); border-radius: 12px;
+  padding: 0.9rem; border-left: 2px solid var(--emerald);
+}
+.reflect-lbl {
+  font-size: 0.63rem; letter-spacing: 0.12em;
+  text-transform: uppercase; color: var(--emerald-light);
+  margin-bottom: 0.4rem; font-weight: 700;
+}
+.reflect-txt {
+  font-size: 0.85rem; line-height: 1.65;
+  color: var(--cream); opacity: 0.72;
+  font-style: italic; font-family: 'Cormorant', serif;
+}
+/* custom badge */
+.custom-tag {
+  font-size: 0.58rem; padding: 0.1rem 0.4rem;
+  border-radius: 99px; background: rgba(200,168,75,0.15);
+  border: 1px solid rgba(200,168,75,0.3);
+  color: var(--gold); letter-spacing: 0.05em;
+  margin-left: 0.3rem; vertical-align: middle;
+  font-weight: 700; text-transform: uppercase;
+}
+
+/* ── ADD DUA SECTION ── */
+.add-section {
+  position: relative; z-index: 10;
+  max-width: 540px; margin: 0 auto;
+  padding: 0 1rem 1.5rem;
+}
+.add-card {
+  background: var(--surface);
+  border: 1px dashed rgba(200,168,75,0.22);
+  border-radius: 18px; padding: 1.25rem;
+  transition: border-color 0.3s;
+}
+.add-card:focus-within { border-color: rgba(200,168,75,0.45); }
+.add-title {
+  font-family: 'Cormorant', serif;
+  font-size: 1.05rem; font-weight: 600;
+  color: var(--gold); margin-bottom: 0.15rem;
+}
+.add-sub {
+  font-size: 0.8rem; color: var(--muted);
+  font-style: italic; margin-bottom: 1.1rem;
+  line-height: 1.5; font-weight: 300;
+}
+.form-g { margin-bottom: 0.75rem; }
+.form-g2 {
+  display: grid; grid-template-columns: 1fr 1fr;
+  gap: 0.65rem; margin-bottom: 0.75rem;
+}
+.flbl {
+  display: block; font-size: 0.62rem;
+  letter-spacing: 0.1em; text-transform: uppercase;
+  color: var(--muted); margin-bottom: 0.3rem; font-weight: 700;
+}
+.finput, .fselect, .ftextarea {
+  width: 100%; padding: 0.65rem 0.85rem;
+  background: var(--surface2); border: 1px solid var(--border);
+  border-radius: 10px; color: var(--cream);
+  font-family: 'Nunito', sans-serif; font-size: 0.88rem;
+  outline: none; transition: border-color 0.2s;
+}
+.finput:focus, .fselect:focus, .ftextarea:focus {
+  border-color: rgba(200,168,75,0.35);
+}
+.finput::placeholder, .ftextarea::placeholder { color: var(--muted); }
+.fselect { appearance: none; cursor: pointer; }
+.fselect option { background: #0f2014; }
+.ftextarea { resize: vertical; min-height: 76px; line-height: 1.6; }
+.farabic { font-family: 'Scheherazade New', serif; font-size: 1.1rem; direction: rtl; text-align: right; }
+.fadd-btn {
+  width: 100%; padding: 0.85rem;
+  border-radius: 12px;
+  background: linear-gradient(135deg, var(--emerald), #1f5c38);
+  border: none; color: #e8f5ee;
+  font-family: 'Cormorant', serif;
+  font-size: 1rem; font-weight: 600; cursor: pointer;
+  transition: all 0.2s; margin-top: 0.5rem; letter-spacing: 0.03em;
+}
+.fadd-btn:hover { transform: translateY(-1px); box-shadow: 0 6px 24px rgba(45,122,79,0.35); }
+.fadd-btn:active { transform: translateY(0); }
+
+/* ── SHARE BANNER ── */
+.share-section {
+  position: relative; z-index: 10;
+  max-width: 540px; margin: 0 auto;
+  padding: 0 1rem 1rem;
+}
+.share-card {
+  background: linear-gradient(135deg, var(--surface2), var(--surface3));
+  border: 1px solid var(--border-em); border-radius: 18px;
+  padding: 1.25rem; text-align: center;
+}
+.share-title {
+  font-family: 'Cormorant', serif;
+  font-size: 1rem; color: var(--cream); margin-bottom: 0.3rem;
+}
+.share-sub {
+  font-size: 0.78rem; color: var(--muted);
+  font-style: italic; margin-bottom: 1rem; line-height: 1.5;
+}
+.share-btns { display: flex; gap: 0.65rem; justify-content: center; flex-wrap: wrap; }
+.share-btn {
+  padding: 0.55rem 1.2rem; border-radius: 99px;
+  border: 1px solid; font-family: 'Nunito', sans-serif;
+  font-size: 0.82rem; cursor: pointer; transition: all 0.2s;
+  font-weight: 700;
+}
+.share-btn.primary {
+  background: linear-gradient(135deg, var(--gold), #a07828);
+  border-color: transparent; color: #0a1a0f;
+}
+.share-btn.secondary {
+  background: transparent; border-color: var(--border-em);
+  color: var(--emerald-light);
+}
+.share-btn:hover { transform: translateY(-1px); }
+
+/* ── FOOTER ── */
+.app-footer {
+  position: relative; z-index: 10;
+  text-align: center; padding: 1.5rem 1rem 2.5rem;
+  border-top: 1px solid var(--border);
+  margin-top: 1rem;
+}
+.footer-brand {
+  font-size: 0.65rem; letter-spacing: 0.2em;
+  text-transform: uppercase; color: var(--muted);
+  margin-bottom: 0.3rem;
+}
+.footer-brand span { color: var(--emerald-light); }
+.footer-threads {
+  display: inline-flex; align-items: center; gap: 0.4rem;
+  font-size: 0.72rem; color: var(--muted);
+  text-decoration: none; transition: color 0.2s;
+  letter-spacing: 0.05em;
+}
+.footer-threads:hover { color: var(--gold); }
+.footer-ayah {
+  font-family: 'Cormorant', serif;
+  font-style: italic; font-size: 0.78rem;
+  color: var(--muted); margin-top: 0.85rem; line-height: 1.6;
+  max-width: 280px; margin-left: auto; margin-right: auto;
+}
+
+/* ── TOAST ── */
+.toast {
+  position: fixed; bottom: calc(1.5rem + var(--safe-bot));
+  left: 50%; transform: translateX(-50%) translateY(100px);
+  background: linear-gradient(135deg, var(--surface2), var(--surface3));
+  border: 1px solid rgba(74,170,114,0.3);
+  border-radius: 16px; padding: 0.85rem 1.5rem;
+  z-index: 400; text-align: center; min-width: 240px;
+  box-shadow: 0 8px 40px rgba(0,0,0,0.5);
+  transition: transform 0.5s cubic-bezier(.34,1.56,.64,1);
+  max-width: calc(100vw - 3rem);
+}
+.toast.show { transform: translateX(-50%) translateY(0); }
+.t-ico { font-size: 1.2rem; display: block; margin-bottom: 0.15rem; }
+.t-title { font-weight: 700; color: var(--emerald-light); font-size: 0.9rem; font-family: 'Cormorant', serif; }
+.t-sub { font-size: 0.75rem; color: var(--muted); font-style: italic; margin-top: 0.1rem; }
+
+/* ── COMPLETE MODAL ── */
+.modal-bg {
+  position: fixed; inset: 0; z-index: 600;
+  background: rgba(6,14,8,0.92); backdrop-filter: blur(6px);
+  display: flex; align-items: center; justify-content: center;
+  padding: 1.5rem; opacity: 0; pointer-events: none;
+  transition: opacity 0.4s;
+}
+.modal-bg.show { opacity: 1; pointer-events: all; }
+.modal-box {
+  background: linear-gradient(135deg, var(--surface), var(--surface2));
+  border: 1px solid rgba(200,168,75,0.3);
+  border-radius: 24px; padding: 2rem 1.5rem;
+  max-width: 380px; width: 100%; text-align: center;
+  animation: cardIn 0.4s ease;
+}
+.modal-moon { font-size: 3.5rem; display: block; margin-bottom: 1rem; animation: floatMoon 3s ease-in-out infinite; }
+.modal-arabic {
+  font-family: 'Scheherazade New', serif;
+  font-size: 1.6rem; color: var(--gold-light); margin-bottom: 0.4rem;
+}
+.modal-title {
+  font-family: 'Cormorant', serif;
+  font-size: 1.3rem; color: var(--cream); margin-bottom: 0.6rem;
+}
+.modal-sub { font-size: 0.85rem; color: var(--muted); line-height: 1.7; font-style: italic; margin-bottom: 1.5rem; }
+.modal-cta {
+  padding: 0.75rem 2rem; border-radius: 99px;
+  background: linear-gradient(135deg, var(--gold), #a07828);
+  border: none; color: #0a1a0f;
+  font-family: 'Cormorant', serif;
+  font-size: 0.95rem; font-weight: 700; cursor: pointer;
+}
+.empty-st {
+  text-align: center; padding: 3rem 1rem;
+  color: var(--muted); font-style: italic; font-size: 0.95rem;
+}
+.empty-st span { display: block; font-size: 2rem; margin-bottom: 0.75rem; opacity: 0.4; }
+
+/* ── BOTTOM NAV ── */
+.bottom-nav {
+  position: fixed; bottom: 0; left: 0; right: 0; z-index: 200;
+  background: rgba(9,14,8,0.96); backdrop-filter: blur(20px);
+  border-top: 1px solid var(--border);
+  display: flex; padding: 0.5rem 0 calc(0.5rem + var(--safe-bot));
+  padding-bottom: calc(0.6rem + var(--safe-bot));
+}
+.nav-btn {
+  flex: 1; display: flex; flex-direction: column;
+  align-items: center; gap: 0.22rem;
+  background: none; border: none; cursor: pointer;
+  color: var(--muted); transition: all 0.22s;
+  padding: 0.3rem 0;
+  -webkit-tap-highlight-color: transparent;
+}
+.nav-btn.active { color: var(--gold); }
+.nav-btn .nav-ico { font-size: 1.3rem; line-height: 1; }
+.nav-btn .nav-lbl { font-size: 0.6rem; letter-spacing: 0.06em; text-transform: uppercase; font-weight: 700; font-family: 'Nunito', sans-serif; }
+
+/* ── PAGE SYSTEM ── */
+.page { display: none; }
+.page.active { display: block; }
+body { padding-bottom: calc(70px + var(--safe-bot)); }
+
+/* ── AUTHENTIC DUAS PAGE ── */
+.auth-hero {
+  text-align: center; padding: 2rem 1.5rem 1.5rem;
+  position: relative; z-index: 2;
+}
+.auth-hero-title {
+  font-family: 'Cormorant', serif;
+  font-size: 1.5rem; font-weight: 700; color: var(--gold-light);
+  margin-bottom: 0.3rem;
+}
+.auth-hero-sub { font-size: 0.82rem; color: var(--muted); font-style: italic; line-height: 1.6; }
+.source-tabs {
+  display: flex; gap: 0.45rem; overflow-x: auto;
+  padding: 0 1.25rem 1rem; scrollbar-width: none;
+  position: relative; z-index: 2;
+}
+.source-tabs::-webkit-scrollbar { display: none; }
+.source-pill {
+  flex-shrink: 0; padding: 0.4rem 1rem; border-radius: 99px;
+  border: 1px solid var(--border); background: transparent;
+  color: var(--muted); font-size: 0.8rem; cursor: pointer;
+  transition: all 0.22s; white-space: nowrap;
+  font-family: 'Nunito', sans-serif; font-weight: 300;
+}
+.source-pill.active {
+  background: linear-gradient(135deg, #2a1a00, #3d2800);
+  border-color: rgba(200,168,75,0.4); color: var(--gold-light); font-weight: 700;
+}
+.auth-grid {
+  position: relative; z-index: 2;
+  padding: 0 1rem 2rem; display: flex; flex-direction: column;
+  gap: 1rem; max-width: 540px; margin: 0 auto;
+}
+.auth-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 18px; padding: 1.25rem;
+  position: relative; overflow: hidden;
+  animation: cardIn 0.45s ease both;
+}
+.auth-card::before {
+  content: ''; position: absolute; top: 0; left: 0; right: 0; height: 2px;
+  background: linear-gradient(90deg, transparent, var(--gold), transparent);
+  opacity: 0.5;
+}
+.auth-source-badge {
+  display: inline-flex; align-items: center; gap: 0.35rem;
+  padding: 0.22rem 0.7rem; border-radius: 99px;
+  font-size: 0.65rem; letter-spacing: 0.08em; text-transform: uppercase;
+  font-weight: 700; font-family: 'Nunito', sans-serif;
+  margin-bottom: 0.85rem;
+}
+.auth-arabic {
+  font-family: 'Scheherazade New', serif;
+  font-size: clamp(1.2rem,4vw,1.6rem); line-height: 2;
+  color: var(--gold-light); direction: rtl; text-align: right;
+  margin-bottom: 0.65rem;
+}
+.auth-translit {
+  font-style: italic; font-size: 0.8rem; color: var(--muted);
+  line-height: 1.6; margin-bottom: 0.6rem;
+  font-family: 'Cormorant', serif;
+}
+.auth-hr { height: 1px; background: var(--border); margin-bottom: 0.7rem; }
+.auth-meaning { font-size: 0.92rem; line-height: 1.75; color: var(--cream); opacity: 0.88; font-weight: 300; }
+.auth-ref {
+  display: flex; align-items: flex-start; gap: 0.5rem;
+  margin-top: 0.85rem; padding: 0.65rem 0.85rem;
+  background: rgba(200,168,75,0.06); border-radius: 10px;
+  border-left: 2px solid var(--gold);
+}
+.auth-ref-ico { font-size: 0.85rem; flex-shrink: 0; margin-top: 0.1rem; }
+.auth-ref-text { font-size: 0.75rem; color: var(--gold); font-family: 'Nunito', sans-serif; letter-spacing: 0.04em; line-height: 1.5; }
+.auth-check {
+  width: 30px; height: 30px; border-radius: 50%;
+  border: 1.5px solid rgba(255,255,255,0.1);
+  background: transparent; display: flex; align-items: center;
+  justify-content: center; cursor: pointer; flex-shrink: 0;
+  transition: all 0.25s; position: absolute; top: 1.25rem; right: 1.25rem;
+}
+.auth-check:active { transform: scale(0.9); }
+.auth-check.done { background: linear-gradient(135deg,var(--emerald),#1f5c38); border-color: transparent; }
+.auth-check .tick { display: none; color: #e8f5ee; font-size: 0.85rem; }
+.auth-check.done .tick { display: block; animation: checkPop 0.3s ease; }
+
+/* ── DHIKR PAGE ── */
+.dhikr-hero { text-align: center; padding: 2rem 1.5rem 1.5rem; position: relative; z-index: 2; }
+.dhikr-hero-title { font-family: 'Cormorant', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.3rem; }
+.dhikr-hero-sub { font-size: 0.82rem; color: var(--muted); font-style: italic; }
+.dhikr-grid { position: relative; z-index: 2; padding: 0 1rem 2rem; display: flex; flex-direction: column; gap: 1rem; max-width: 540px; margin: 0 auto; }
+.dhikr-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 18px; padding: 1.25rem; text-align: center;
+  position: relative; overflow: hidden; transition: border-color 0.3s;
+}
+.dhikr-card.complete { border-color: rgba(74,170,114,0.4); }
+.dhikr-card.complete::before { content: ''; position: absolute; inset: 0; background: linear-gradient(135deg,rgba(45,122,79,0.08),transparent); border-radius: 18px; pointer-events: none; }
+.dhikr-arabic { font-family: 'Scheherazade New', serif; font-size: clamp(1.4rem,5vw,2rem); color: var(--gold-light); margin-bottom: 0.3rem; line-height: 1.6; }
+.dhikr-name { font-size: 0.85rem; color: var(--muted); margin-bottom: 0.25rem; font-weight: 300; }
+.dhikr-meaning { font-size: 0.8rem; color: var(--muted); font-style: italic; margin-bottom: 1rem; font-family: 'Cormorant', serif; }
+.dhikr-count-display {
+  font-family: 'Cormorant', serif;
+  font-size: 4rem; font-weight: 700; line-height: 1;
+  margin-bottom: 0.25rem; transition: color 0.3s;
+}
+.dhikr-target { font-size: 0.72rem; color: var(--muted); letter-spacing: 0.1em; font-family: 'Nunito', sans-serif; margin-bottom: 0.85rem; }
+.dhikr-prog { height: 3px; background: rgba(255,255,255,0.05); border-radius: 99px; overflow: hidden; margin-bottom: 1rem; }
+.dhikr-prog-fill { height: 100%; border-radius: 99px; transition: width 0.3s ease; }
+.dhikr-tap-btn {
+  width: 80px; height: 80px; border-radius: 50%;
+  border: 2px solid; font-size: 1.8rem;
+  cursor: pointer; transition: all 0.15s;
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 0.85rem; position: relative;
+  -webkit-tap-highlight-color: transparent;
+}
+.dhikr-tap-btn:active { transform: scale(0.92); }
+.dhikr-reset {
+  background: none; border: 1px solid var(--border); border-radius: 99px;
+  color: var(--muted); font-size: 0.75rem; padding: 0.35rem 1rem;
+  cursor: pointer; font-family: 'Nunito', sans-serif; transition: all 0.2s;
+}
+.dhikr-reset:hover { border-color: var(--emerald); color: var(--emerald-light); }
+
+/* ── HEART'S DESIRES PAGE ── */
+.heart-hero { text-align: center; padding: 2rem 1.5rem 1.5rem; position: relative; z-index: 2; }
+.heart-hero-arabic { font-family: 'Scheherazade New', serif; font-size: 1.6rem; color: var(--gold-light); margin-bottom: 0.3rem; }
+.heart-hero-title { font-family: 'Cormorant', serif; font-size: 1.4rem; font-weight: 700; color: var(--cream); margin-bottom: 0.4rem; }
+.heart-hero-sub { font-size: 0.82rem; color: var(--muted); font-style: italic; line-height: 1.7; max-width: 320px; margin: 0 auto; }
+.heart-container { position: relative; z-index: 2; max-width: 540px; margin: 0 auto; padding: 0 1rem 2rem; }
+.prompt-cards { display: flex; flex-direction: column; gap: 0.85rem; margin-bottom: 1.5rem; }
+.prompt-card {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 16px; padding: 1.1rem; cursor: pointer;
+  transition: all 0.25s; position: relative;
+}
+.prompt-card:hover { border-color: rgba(200,168,75,0.25); }
+.prompt-card.open { border-color: rgba(200,168,75,0.3); }
+.prompt-header { display: flex; justify-content: space-between; align-items: center; gap: 0.75rem; }
+.prompt-q { font-size: 0.92rem; color: var(--cream); line-height: 1.5; font-family: 'Cormorant', serif; font-style: italic; }
+.prompt-ico { font-size: 1.1rem; flex-shrink: 0; }
+.prompt-arrow { color: var(--muted); font-size: 0.75rem; flex-shrink: 0; transition: transform 0.25s; }
+.prompt-card.open .prompt-arrow { transform: rotate(180deg); }
+.prompt-textarea-wrap { max-height: 0; overflow: hidden; opacity: 0; transition: max-height 0.4s ease, opacity 0.3s, margin 0.3s; }
+.prompt-card.open .prompt-textarea-wrap { max-height: 300px; opacity: 1; margin-top: 0.85rem; }
+.prompt-textarea {
+  width: 100%; background: var(--surface2);
+  border: 1px solid var(--border); border-radius: 10px;
+  padding: 0.75rem; color: var(--cream);
+  font-family: 'Cormorant', serif; font-style: italic;
+  font-size: 0.9rem; outline: none; resize: vertical;
+  min-height: 100px; line-height: 1.7;
+  transition: border-color 0.2s;
+}
+.prompt-textarea:focus { border-color: rgba(200,168,75,0.35); }
+.prompt-textarea::placeholder { color: var(--muted); }
+.prompt-saved { font-size: 0.7rem; color: var(--emerald-light); margin-top: 0.4rem; opacity: 0; transition: opacity 0.3s; font-family: 'Nunito', sans-serif; }
+.prompt-saved.show { opacity: 1; }
+.letter-section { margin-top: 0.5rem; }
+.letter-title { font-family: 'Cormorant', serif; font-size: 1rem; font-weight: 600; color: var(--gold); margin-bottom: 0.3rem; }
+.letter-sub { font-size: 0.8rem; color: var(--muted); font-style: italic; margin-bottom: 0.85rem; line-height: 1.5; }
+.letter-textarea {
+  width: 100%; min-height: 200px; background: var(--surface);
+  border: 1px solid rgba(200,168,75,0.2); border-radius: 16px;
+  padding: 1.1rem; color: var(--cream);
+  font-family: 'Cormorant', serif; font-style: italic;
+  font-size: 0.95rem; line-height: 1.8; outline: none; resize: vertical;
+  transition: border-color 0.2s;
+}
+.letter-textarea:focus { border-color: rgba(200,168,75,0.4); }
+.letter-textarea::placeholder { color: var(--muted); opacity: 0.6; }
+.letter-note { font-size: 0.72rem; color: var(--muted); margin-top: 0.5rem; font-style: italic; text-align: center; }
+
+/* ── NIGHT PLANNER PAGE ── */
+.planner-hero { text-align: center; padding: 2rem 1.5rem 1.5rem; position: relative; z-index: 2; }
+.planner-hero-title { font-family: 'Cormorant', serif; font-size: 1.5rem; font-weight: 700; color: var(--gold-light); margin-bottom: 0.3rem; }
+.planner-hero-sub { font-size: 0.82rem; color: var(--muted); font-style: italic; line-height: 1.6; }
+.night-tabs { display: flex; gap: 0.45rem; overflow-x: auto; padding: 0 1.25rem 1rem; scrollbar-width: none; position: relative; z-index: 2; }
+.night-tabs::-webkit-scrollbar { display: none; }
+.night-pill {
+  flex-shrink: 0; padding: 0.4rem 0.85rem; border-radius: 99px;
+  border: 1px solid var(--border); background: transparent;
+  color: var(--muted); font-size: 0.8rem; cursor: pointer;
+  transition: all 0.22s; white-space: nowrap; font-family: 'Nunito', sans-serif;
+}
+.night-pill.active { background: linear-gradient(135deg,var(--emerald),#1f5c38); border-color: transparent; color: #e8f5ee; font-weight: 700; }
+.night-pill.odd { border-color: rgba(200,168,75,0.25); color: var(--gold); }
+.night-pill.odd.active { background: linear-gradient(135deg,#3d2800,#5c4000); border-color: rgba(200,168,75,0.4); color: var(--gold-light); }
+.planner-content { position: relative; z-index: 2; max-width: 540px; margin: 0 auto; padding: 0 1rem 2rem; }
+.night-card-hero {
+  background: linear-gradient(135deg, var(--surface2), var(--surface3));
+  border: 1px solid; border-radius: 18px; padding: 1.25rem;
+  text-align: center; margin-bottom: 1.25rem;
+}
+.night-card-num { font-family: 'Scheherazade New', serif; font-size: 2rem; color: var(--gold-light); margin-bottom: 0.2rem; }
+.night-card-label { font-size: 0.72rem; letter-spacing: 0.15em; text-transform: uppercase; color: var(--muted); margin-bottom: 0.5rem; }
+.night-card-desc { font-size: 0.88rem; color: var(--cream); opacity: 0.8; font-style: italic; font-family: 'Cormorant', serif; line-height: 1.6; }
+.night-card-hadith { margin-top: 0.75rem; padding: 0.6rem 0.85rem; background: rgba(200,168,75,0.07); border-radius: 10px; border-left: 2px solid var(--gold); font-size: 0.75rem; color: var(--gold); font-family: 'Nunito', sans-serif; line-height: 1.5; }
+.activities-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 0.75rem; font-family: 'Nunito', sans-serif; }
+.activity-list { display: flex; flex-direction: column; gap: 0.65rem; margin-bottom: 1.25rem; }
+.activity-item {
+  display: flex; align-items: center; gap: 0.85rem;
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 0.85rem 1rem; cursor: pointer;
+  transition: all 0.22s;
+}
+.activity-item.done { border-color: rgba(74,170,114,0.3); background: linear-gradient(135deg,rgba(45,122,79,0.08),var(--surface)); }
+.activity-check {
+  width: 22px; height: 22px; border-radius: 50%; flex-shrink: 0;
+  border: 1.5px solid rgba(255,255,255,0.15); background: transparent;
+  display: flex; align-items: center; justify-content: center;
+  transition: all 0.22s; font-size: 0.7rem;
+}
+.activity-item.done .activity-check { background: var(--emerald); border-color: transparent; color: white; }
+.activity-ico { font-size: 1.1rem; flex-shrink: 0; }
+.activity-text { font-size: 0.88rem; color: var(--cream); opacity: 0.85; font-weight: 300; flex: 1; }
+.activity-item.done .activity-text { opacity: 1; }
+.night-notes-label { font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--muted); font-weight: 700; margin-bottom: 0.65rem; font-family: 'Nunito', sans-serif; }
+.night-notes {
+  width: 100%; min-height: 90px; background: var(--surface);
+  border: 1px solid var(--border); border-radius: 12px;
+  padding: 0.85rem; color: var(--cream);
+  font-family: 'Cormorant', serif; font-style: italic;
+  font-size: 0.88rem; line-height: 1.7; outline: none; resize: vertical;
+  transition: border-color 0.2s;
+}
+.night-notes:focus { border-color: rgba(200,168,75,0.35); }
+.night-notes::placeholder { color: var(--muted); opacity: 0.6; }
+
+/* ── LIGHT MODE TRANSITIONS ── */
+.dcard, .auth-card, .dhikr-card, .prompt-card, .add-card,
+.share-card, .stat-card, .night-card-hero, .activity-item,
+.reflect-inner, .letter-textarea, .night-notes, .prompt-textarea,
+.search-box, .finput, .fselect, .ftextarea,
+.bottom-nav, #install-banner, .modal-box {
+  transition: background 0.4s ease, border-color 0.4s ease, color 0.4s ease;
+}
+
+/* light mode nav */
+:root.light .bottom-nav {
+  background: rgba(247,243,235,0.96);
+}
+:root.light .geo-bg { opacity: 0.03; }
+:root.light .orb1 { background: radial-gradient(circle, rgba(31,107,62,0.12), transparent); }
+:root.light .orb2 { background: radial-gradient(circle, rgba(154,117,32,0.08), transparent); }
+
+/* ── ANIMATIONS ── */
+@keyframes splashFloat { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-10px)} }
+@keyframes floatMoon { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-7px)} }
+@keyframes loaderPulse { 0%,100%{opacity:0.2} 50%{opacity:1} }
+@keyframes orbDrift { 0%,100%{transform:translate(0,0)} 33%{transform:translate(20px,-15px)} 66%{transform:translate(-15px,20px)} }
+@keyframes cardIn { from{opacity:0;transform:translateY(12px)} to{opacity:1;transform:translateY(0)} }
+@keyframes checkPop { 0%{transform:scale(0) rotate(-20deg)} 60%{transform:scale(1.2) rotate(5deg)} 100%{transform:scale(1) rotate(0)} }
+@keyframes pulseRing { 0%{transform:scale(1);opacity:0.7} 100%{transform:scale(1.7);opacity:0} }
+@keyframes slideDown { from{transform:translateY(-100%)} to{transform:translateY(0)} }
+@keyframes dhikrTap { 0%{transform:scale(1)} 50%{transform:scale(0.93)} 100%{transform:scale(1)} }
+
+::-webkit-scrollbar { width: 0; }
+</style>
+</head>
+<body>
+
+<!-- Splash -->
+<div id="splash">
+  <div class="splash-moon">🌙</div>
+  <div class="splash-brand">ummazrahcreatives presents</div>
+  <div class="splash-title">لَيْلَةُ الْقَدْر</div>
+  <div class="splash-sub">Du'as for Growth & Life</div>
+  <div class="splash-divider"></div>
+  <div class="splash-by">A gift for the ummah by <span>@ummazrahcreatives</span></div>
+  <div class="splash-loader">
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+    <div class="loader-dot"></div>
+  </div>
+</div>
+
+<!-- Geo background -->
+<div class="geo-bg">
+  <svg class="geo-top" viewBox="0 0 500 500" fill="none">
+    <circle cx="250" cy="250" r="200" stroke="#c8a84b" stroke-width="0.5"/>
+    <circle cx="250" cy="250" r="150" stroke="#c8a84b" stroke-width="0.5"/>
+    <circle cx="250" cy="250" r="100" stroke="#c8a84b" stroke-width="0.5"/>
+    <polygon points="250,50 450,200 370,430 130,430 50,200" stroke="#2d7a4f" stroke-width="0.5" fill="none"/>
+    <polygon points="250,100 400,200 350,380 150,380 100,200" stroke="#c8a84b" stroke-width="0.3" fill="none"/>
+  </svg>
+  <svg class="geo-bot" viewBox="0 0 400 400" fill="none">
+    <circle cx="200" cy="200" r="160" stroke="#2d7a4f" stroke-width="0.5"/>
+    <circle cx="200" cy="200" r="100" stroke="#c8a84b" stroke-width="0.5"/>
+    <polygon points="200,40 360,160 300,340 100,340 40,160" stroke="#2d7a4f" stroke-width="0.5" fill="none"/>
+  </svg>
+  <div class="orb orb1"></div>
+  <div class="orb orb2"></div>
+  <div class="orb orb3"></div>
+</div>
+
+<!-- Theme Toggle -->
+<button class="theme-toggle" id="theme-toggle" onclick="toggleTheme()" title="Toggle light/dark mode">🌙</button>
+
+<!-- Install Banner -->
+<div id="install-banner">
+  <span class="install-icon">🌙</span>
+  <div class="install-text">
+    <strong>Add to Home Screen</strong>
+    <span>Use as a mobile app — works offline</span>
+  </div>
+  <button class="install-btn" id="install-btn">Install</button>
+  <button class="install-close" onclick="dismissInstall()">✕</button>
+</div>
+
+<!-- ══ PAGE: DU'AS ══ -->
+<div class="page active" id="page-duas">
+
+<!-- Header -->
+<div class="app-header">
+  <a class="brand-chip" href="https://www.threads.net/@ummazrahcreatives" target="_blank" rel="noopener">
+    🧵 @ummazrahcreatives
+  </a>
+  <span class="header-moon">🌙</span>
+  <div class="header-arabic">لَيْلَةُ الْقَدْرِ</div>
+  <div class="header-eng">Laylatul Qadr · Du'as for Growth & Life</div>
+  <div class="header-quote">"For the Muslimah becoming her best self — du'as for every part of you that is still growing. 🤍"</div>
+</div>
+
+<!-- Stats -->
+<div class="stats-row">
+  <div class="stat-card"><div class="stat-n" id="s-done">0</div><div class="stat-l">Recited</div></div>
+  <div class="stat-card"><div class="stat-n" id="s-total">0</div><div class="stat-l">Du'as</div></div>
+  <div class="stat-card"><div class="stat-n" id="s-pct">0%</div><div class="stat-l">Complete</div></div>
+</div>
+<div class="prog-wrap">
+  <div class="prog-track"><div class="prog-fill" id="prog-fill" style="width:0%"></div></div>
+</div>
+
+<!-- Search -->
+<div class="search-wrap">
+  <span class="search-ico">🔍</span>
+  <input class="search-box" id="search-box" type="text" placeholder="Search du'as…" oninput="onSearch()"/>
+</div>
+
+<!-- Category Tabs -->
+<div class="cats-wrap"><div class="cats-scroll" id="cat-tabs"></div></div>
+
+<!-- Section divider -->
+<div class="sec-div"><span class="sec-div-text" id="sec-lbl">All Du'as</span></div>
+
+<!-- Du'a Grid -->
+<div class="grid" id="grid"></div>
+
+<!-- Add Custom Du'a -->
+<div class="add-section">
+  <div class="sec-div" style="margin-bottom:1rem"><span class="sec-div-text">✦ Write Your Own Du'a</span></div>
+  <div class="add-card">
+    <div class="add-title">🤲 Your Personal Du'a</div>
+    <div class="add-sub">Write anything on your heart. Add it to your list for tonight.</div>
+    <div class="form-g2">
+      <div>
+        <label class="flbl">Category</label>
+        <select class="fselect" id="nc">
+          <option>Deen</option><option>Mental</option><option>Emotional</option>
+          <option>Physical</option><option>Financial</option><option>Growth</option>
+          <option>Marriage</option><option>Children</option><option>Akhira</option>
+          <option>Ummah</option><option>Loved Ones</option><option>Personal</option>
+        </select>
+      </div>
+      <div>
+        <label class="flbl">Growth Area</label>
+        <input class="finput" id="ntag" type="text" placeholder="e.g. inner peace…"/>
+      </div>
+    </div>
+    <div class="form-g">
+      <label class="flbl">Arabic (optional)</label>
+      <input class="finput farabic" id="nar" type="text" placeholder="اكتب هنا…" dir="rtl"/>
+    </div>
+    <div class="form-g">
+      <label class="flbl">Transliteration (optional)</label>
+      <input class="finput" id="ntr" type="text" placeholder="Allahumma…"/>
+    </div>
+    <div class="form-g">
+      <label class="flbl">Your Du'a / Meaning ✦</label>
+      <textarea class="ftextarea" id="nmn" placeholder="O Allah, I ask You for…" rows="3"></textarea>
+    </div>
+    <div class="form-g">
+      <label class="flbl">Personal Reflection (optional)</label>
+      <textarea class="ftextarea" id="nrf" placeholder="Why does this du'a matter to you?…" rows="2"></textarea>
+    </div>
+    <button class="fadd-btn" onclick="addCustom()">✦ Add This Du'a to My List</button>
+  </div>
+</div>
+
+<!-- Share -->
+<div class="share-section">
+  <div class="share-card">
+    <div class="share-title">🌙 Share with the Ummah</div>
+    <div class="share-sub">Every person who makes du'a because of you earns you reward too. Share freely.</div>
+    <div class="share-btns">
+      <button class="share-btn primary" onclick="shareApp()">Share This App</button>
+      <button class="share-btn secondary" onclick="window.open('https://www.threads.net/@ummazrahcreatives','_blank')">Follow on Threads</button>
+    </div>
+  </div>
+</div>
+
+<!-- Footer -->
+<div class="app-footer">
+  <div class="footer-brand">Made with 🤍 by <span>ummazrahcreatives</span></div>
+  <a class="footer-threads" href="https://www.threads.net/@ummazrahcreatives" target="_blank" rel="noopener">
+    🧵 Follow on Threads @ummazrahcreatives
+  </a>
+  <div class="footer-ayah">"Indeed, We sent the Qur'an down during the Night of Decree." — Surah Al-Qadr 97:1</div>
+</div>
+
+<!-- Toast -->
+<div class="toast" id="toast">
+  <span class="t-ico" id="t-ico">🌙</span>
+  <div class="t-title" id="t-title">Du'a recited — Ameen!</div>
+  <div class="t-sub" id="t-sub">May Allah accept it from you.</div>
+</div>
+
+<!-- Complete Modal -->
+<div class="modal-bg" id="modal">
+  <div class="modal-box">
+    <span class="modal-moon">🌙</span>
+    <div class="modal-arabic">اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي</div>
+    <div class="modal-title">All Du'as Recited — MashaAllah!</div>
+    <div class="modal-sub">Allahumma innaka 'afuwwun tuhibbul 'afwa fa'fu 'anni.<br/><br/>O Allah, You are Forgiving and You love forgiveness — so forgive me. 🤍<br/><br/>May Allah answer every du'a you made on this blessed night. Ameen, Ya Rabb. 🤲</div>
+    <button class="modal-cta" onclick="closeModal()">Ameen, Alhamdulillah</button>
+  </div>
+</div>
+
+</div><!-- end page-duas -->
+
+<!-- ══ PAGE: AUTHENTIC DU'AS ══ -->
+<div class="page" id="page-authentic">
+<div class="auth-hero">
+  <span class="header-moon" style="font-size:2.5rem">📖</span>
+  <div class="auth-hero-title">From the Qur'an & Sunnah</div>
+  <div class="auth-hero-sub">Authenticated du'as with full source references — the most powerful words you can say tonight.</div>
+</div>
+<div class="source-tabs" id="source-tabs"></div>
+<div class="auth-grid" id="auth-grid"></div>
+</div>
+
+<!-- ══ PAGE: DHIKR COUNTER ══ -->
+<div class="page" id="page-dhikr">
+<div class="dhikr-hero">
+  <span class="header-moon" style="font-size:2.5rem">📿</span>
+  <div class="dhikr-hero-title">Dhikr Counter</div>
+  <div class="dhikr-hero-sub">Tap to count. Keep your tongue moist with the remembrance of Allah. 🤍</div>
+</div>
+<div class="dhikr-grid" id="dhikr-grid"></div>
+</div>
+
+<!-- ══ PAGE: HEART'S DESIRES ══ -->
+<div class="page" id="page-heart">
+<div class="heart-hero">
+  <div class="heart-hero-arabic">يَا رَبِّ</div>
+  <div class="heart-hero-title">Your Heart's Desires 🤍</div>
+  <div class="heart-hero-sub">This is your private space. Write what is deepest in your heart. Allah already knows — but there is something powerful about putting your words before Him tonight.</div>
+</div>
+<div class="heart-container">
+
+  <!-- Guided Prompts -->
+  <div class="sec-div" style="margin-bottom:1rem;position:relative;z-index:2"><span class="sec-div-text">✦ Guided Prompts</span></div>
+  <div class="prompt-cards" id="prompt-cards"></div>
+
+  <!-- Free Letter to Allah -->
+  <div class="sec-div" style="margin-bottom:1rem;position:relative;z-index:2"><span class="sec-div-text">✦ A Letter to Allah</span></div>
+  <div class="letter-section">
+    <div class="letter-title">🤍 Write Anything on Your Heart</div>
+    <div class="letter-sub">No format. No structure. Just you and your Rabb. Write it all — your hopes, your fears, your dreams, your pain, your gratitude. He is Al-Sami', the All-Hearing.</div>
+    <textarea class="letter-textarea" id="letter-text" placeholder="Ya Allah, tonight I want to tell You…&#10;&#10;I am asking You for…&#10;&#10;I am grateful for…&#10;&#10;I am scared of…&#10;&#10;My biggest dream is…&#10;&#10;What I need most right now is…" oninput="saveLetter()"></textarea>
+    <div class="letter-note">✦ Your letter is saved privately on your device. Only you and Allah can read this. 🤍</div>
+  </div>
+</div>
+</div>
+
+<!-- ══ PAGE: NIGHT PLANNER ══ -->
+<div class="page" id="page-planner">
+<div class="planner-hero">
+  <span class="header-moon" style="font-size:2.5rem">🌙</span>
+  <div class="planner-hero-title">10 Nights Planner</div>
+  <div class="planner-hero-sub">A dedicated space for each of the last 10 nights — plan your ibadah, track your progress, and leave nothing to chance.</div>
+</div>
+<div class="night-tabs" id="night-tabs"></div>
+<div class="planner-content" id="planner-content"></div>
+</div>
+
+<!-- ══ BOTTOM NAVIGATION ══ -->
+<nav class="bottom-nav">
+  <button class="nav-btn active" onclick="navTo('duas',this)">
+    <span class="nav-ico">🤲</span><span class="nav-lbl">Du'as</span>
+  </button>
+  <button class="nav-btn" onclick="navTo('authentic',this)">
+    <span class="nav-ico">📖</span><span class="nav-lbl">Qur'an & Sunnah</span>
+  </button>
+  <button class="nav-btn" onclick="navTo('dhikr',this)">
+    <span class="nav-ico">📿</span><span class="nav-lbl">Dhikr</span>
+  </button>
+  <button class="nav-btn" onclick="navTo('heart',this)">
+    <span class="nav-ico">🤍</span><span class="nav-lbl">My Heart</span>
+  </button>
+  <button class="nav-btn" onclick="navTo('planner',this)">
+    <span class="nav-ico">🌙</span><span class="nav-lbl">Planner</span>
+  </button>
+</nav>
+
+<script>
+// ─── CAT META ───
+const CM = {
+  "Deen":       {icon:"🕌",c:"#c9a84c",b:"rgba(201,168,76,0.28)", p:"rgba(201,168,76,0.08)"},
+  "Mental":     {icon:"🧠",c:"#7aa0c9",b:"rgba(122,160,201,0.22)",p:"rgba(122,160,201,0.08)"},
+  "Emotional":  {icon:"💛",c:"#c97aa0",b:"rgba(201,122,160,0.22)",p:"rgba(201,122,160,0.08)"},
+  "Physical":   {icon:"💪",c:"#6db88a",b:"rgba(109,184,138,0.22)",p:"rgba(109,184,138,0.08)"},
+  "Financial":  {icon:"🌿",c:"#5eb8a0",b:"rgba(94,184,160,0.22)", p:"rgba(94,184,160,0.08)"},
+  "Growth":     {icon:"🌱",c:"#4aaa72",b:"rgba(74,170,114,0.22)", p:"rgba(74,170,114,0.08)"},
+  "Marriage":   {icon:"💍",c:"#c97aa0",b:"rgba(201,122,160,0.22)",p:"rgba(201,122,160,0.08)"},
+  "Children":   {icon:"🌸",c:"#6db88a",b:"rgba(109,184,138,0.22)",p:"rgba(109,184,138,0.08)"},
+  "Akhira":     {icon:"🌸",c:"#e8c97a",b:"rgba(232,201,122,0.22)",p:"rgba(232,201,122,0.08)"},
+  "Ummah":      {icon:"🌍",c:"#5eb8a0",b:"rgba(94,184,160,0.22)", p:"rgba(94,184,160,0.08)"},
+  "Loved Ones": {icon:"🤲",c:"#c97aa0",b:"rgba(201,122,160,0.22)",p:"rgba(201,122,160,0.08)"},
+  "Spiritual":  {icon:"✨",c:"#e8c97a",b:"rgba(232,201,122,0.22)",p:"rgba(232,201,122,0.08)"},
+  "Personal":   {icon:"🤍",c:"#c9a84c",b:"rgba(201,168,76,0.22)", p:"rgba(201,168,76,0.06)"},
+};
+
+// ─── DUAS ───
+const DUAS = [
+// 🕌 DEEN
+{id:1,cat:"Deen",mn:"Ya Allah, make my heart fall in love with You over and over again.",gr:"love of Allah"},
+{id:2,cat:"Deen",mn:"Ya Allah, make Salah the thing I run TO and not away from.",gr:"love of salah"},
+{id:3,cat:"Deen",mn:"Ya Allah, make the Quran my comfort, my guide and my healing.",gr:"connection to Quran"},
+{id:4,cat:"Deen",mn:"Ya Allah, accept every act of worship I offered this Ramadan even when it was imperfect.",gr:"acceptance of ibadah"},
+{id:5,cat:"Deen",mn:"Ya Allah, don't let this be the last Ramadan I witness.",gr:"more time to grow"},
+{id:6,cat:"Deen",mn:"Ya Allah, make me of those who finish Ramadan truly forgiven.",gr:"forgiveness & renewal"},
+{id:7,cat:"Deen",mn:"Ya Allah, keep me consistent in my ibadah long after Ramadan ends.",gr:"consistency in deen"},
+{id:8,cat:"Deen",mn:"Ya Allah, strengthen my relationship with You in private — when no one is watching.",gr:"private worship"},
+{id:9,cat:"Deen",mn:"Ya Allah, make my tawbah tonight a real and lasting one.",gr:"sincere repentance"},
+{id:10,cat:"Deen",ar:"لَا إِلَهَ إِلَّا اللَّهُ",tr:"La ilaha illallah",mn:"Ya Allah, seal my life with La ilaha illallah.",gr:"khusnul khatimah",rf:"The Prophet ﷺ said: 'Whoever's last words are La ilaha illallah will enter Jannah.' Ask for this tonight."},
+// 🧠 MENTAL
+{id:11,cat:"Mental",mn:"Ya Allah, free me from overthinking and anxiety.",gr:"mental peace"},
+{id:12,cat:"Mental",mn:"Ya Allah, give me clarity in every decision I am confused about right now.",gr:"clarity & direction"},
+{id:13,cat:"Mental",mn:"Ya Allah, heal the thoughts that are hurting me in silence.",gr:"hidden healing"},
+{id:14,cat:"Mental",mn:"Ya Allah, replace my self-doubt with trust in You.",gr:"confidence in Allah"},
+{id:15,cat:"Mental",mn:"Ya Allah, protect my mind from waswas and negativity.",gr:"protection from waswas"},
+{id:16,cat:"Mental",mn:"Ya Allah, give me focus, discipline and mental strength.",gr:"focus & discipline"},
+{id:17,cat:"Mental",mn:"Ya Allah, help me think well of You always — especially in my hardest moments.",gr:"husn al-dhann billah"},
+{id:18,cat:"Mental",mn:"Ya Allah, remove every mental block that is stopping me from growing.",gr:"removing blocks"},
+{id:19,cat:"Mental",ar:"رَبِّ زِدْنِي عِلْمًا",tr:"Rabbi zidni 'ilma",mn:"Ya Allah, grant me wisdom beyond my years.",gr:"wisdom & knowledge",rf:"One of the shortest du'as in the Quran yet one of the most powerful. A mind that keeps learning never stops growing."},
+{id:20,cat:"Mental",mn:"Ya Allah, give me a mind that always returns to You.",gr:"returning to Allah"},
+// 💛 EMOTIONAL
+{id:21,cat:"Emotional",mn:"Ya Allah, heal every part of my heart that has been broken.",gr:"heart healing"},
+{id:22,cat:"Emotional",mn:"Ya Allah, help me forgive the people who hurt me — even if they never said sorry.",gr:"forgiveness of others"},
+{id:23,cat:"Emotional",mn:"Ya Allah, protect me from a hard heart.",gr:"softness of heart"},
+{id:24,cat:"Emotional",mn:"Ya Allah, remove every grudge, bitterness and resentment I am still holding onto.",gr:"releasing bitterness"},
+{id:25,cat:"Emotional",mn:"Ya Allah, fill my heart with gratitude even on the days that are hard.",gr:"shukr & gratitude"},
+{id:26,cat:"Emotional",mn:"Ya Allah, make me emotionally strong but still soft and gentle.",gr:"emotional strength"},
+{id:27,cat:"Emotional",mn:"Ya Allah, heal my relationship with myself — help me be kinder to who I am.",gr:"self-compassion"},
+{id:28,cat:"Emotional",mn:"Ya Allah, protect me from toxic relationships and surround me with people who bring me closer to You.",gr:"righteous company"},
+{id:29,cat:"Emotional",mn:"Ya Allah, let me love and be loved in ways that are halal and beautiful.",gr:"halal love"},
+{id:30,cat:"Emotional",ar:"أَلَا بِذِكْرِ اللَّهِ تَطْمَئِنُّ الْقُلُوبُ",tr:"Ala bidhikrillahi tatma'innu al-qulub",mn:"Ya Allah, give my heart peace that only comes from You.",gr:"inner peace",rf:"'Verily, in the remembrance of Allah do hearts find rest.' — Quran 13:28. Ask for that rest tonight."},
+// 💪 PHYSICAL
+{id:31,cat:"Physical",ar:"رَبِّ إِنِّي مَسَّنِيَ الضُّرُّ وَأَنتَ أَرْحَمُ الرَّاحِمِينَ",tr:"Rabbi inni massaniyad-durru wa anta arhamur-rahimin",mn:"Ya Allah, heal every illness in my body — the ones diagnosed and the ones unknown.",gr:"complete healing",rf:"Ayyub (AS) made this du'a from the depths of suffering. Allah answered. It can be yours tonight."},
+{id:32,cat:"Physical",ar:"اللَّهُمَّ عَافِنِي فِي بَدَنِي",tr:"Allahumma 'afini fi badani",mn:"Ya Allah, give me energy and strength to worship You fully.",gr:"energy & vitality"},
+{id:33,cat:"Physical",mn:"Ya Allah, help me honor my body as the amanah You gave me.",gr:"body as amanah"},
+{id:34,cat:"Physical",mn:"Ya Allah, give me discipline to nourish and take care of myself.",gr:"self-discipline"},
+{id:35,cat:"Physical",mn:"Ya Allah, remove any pain I have been silently carrying.",gr:"relief from pain"},
+{id:36,cat:"Physical",mn:"Ya Allah, grant me good health for as long as You keep me alive.",gr:"lasting health"},
+{id:37,cat:"Physical",mn:"Ya Allah, help me see taking care of my body as an act of ibadah.",gr:"worship through health"},
+{id:38,cat:"Physical",mn:"Ya Allah, protect me from diseases and grant me complete shifa.",gr:"shifa & protection"},
+{id:39,cat:"Physical",mn:"Ya Allah, bless me with restful sleep and a well-rested body.",gr:"rest & recovery"},
+{id:40,cat:"Physical",mn:"Ya Allah, let my physical strength be used in Your service.",gr:"strength for worship"},
+// 🌿 FINANCIAL
+{id:41,cat:"Financial",ar:"اللَّهُمَّ اكْفِنِي بِحَلَالِكَ عَنْ حَرَامِكَ",tr:"Allahumma-kfini bi-halalika 'an haramik",mn:"Ya Allah, You are Al-Razzaq — open the doors of halal provision for me.",gr:"halal rizq",rf:"Ask Allah to free you from financial anxiety and replace desperation with barakah."},
+{id:42,cat:"Financial",ar:"اللَّهُمَّ بَارِكْ لَنَا فِيمَا رَزَقْتَنَا",tr:"Allahumma barik lana fima razaqtana",mn:"Ya Allah, put barakah in every single cent I earn.",gr:"barakah in income",rf:"Barakah is when a little becomes more than enough. Ask for it in every project, every idea, every peso."},
+{id:43,cat:"Financial",mn:"Ya Allah, free me from debt and financial stress.",gr:"freedom from debt"},
+{id:44,cat:"Financial",mn:"Ya Allah, bless my work and make it a source of good.",gr:"blessed work"},
+{id:45,cat:"Financial",mn:"Ya Allah, help me build something halal that benefits others.",gr:"halal business"},
+{id:46,cat:"Financial",mn:"Ya Allah, make me generous — give me so much that I can give freely.",gr:"generosity"},
+{id:47,cat:"Financial",mn:"Ya Allah, protect me from haram in my income and my spending.",gr:"halal spending"},
+{id:48,cat:"Financial",mn:"Ya Allah, grant me financial stability so I can focus on my akhirah.",gr:"financial peace"},
+{id:49,cat:"Financial",mn:"Ya Allah, make my rizq a means of drawing closer to You.",gr:"rizq for akhirah"},
+{id:50,cat:"Financial",ar:"رَبِّ إِنِّي لِمَا أَنزَلْتَ إِلَيَّ مِنْ خَيْرٍ فَقِيرٌ",tr:"Rabbi inni lima anzalta ilayya min khayrin faqir",mn:"Ya Allah, bless every effort I make and reward my tawakkul in You.",gr:"tawakkul & open doors",rf:"Musa (AS) made this du'a after a season of loss. Then his whole life changed. Make it yours tonight."},
+// 🌱 GROWTH
+{id:51,cat:"Growth",mn:"Ya Allah, make me better today than I was yesterday.",gr:"daily improvement"},
+{id:52,cat:"Growth",mn:"Ya Allah, don't let me die before I become who You created me to be.",gr:"fulfilling potential"},
+{id:53,cat:"Growth",mn:"Ya Allah, surround me with people who push me to grow.",gr:"righteous community"},
+{id:54,cat:"Growth",mn:"Ya Allah, remove every habit, relationship and mindset that is keeping me small.",gr:"removing limits"},
+{id:55,cat:"Growth",mn:"Ya Allah, give me the courage to keep going even when growth is painful.",gr:"courage & persistence"},
+{id:56,cat:"Growth",mn:"Ya Allah, make my journey of self-improvement a form of worship.",gr:"growth as ibadah"},
+{id:57,cat:"Growth",mn:"Ya Allah, help me be patient with my own progress.",gr:"patience with self"},
+{id:58,cat:"Growth",mn:"Ya Allah, bless every small step I take towards becoming better.",gr:"small steps matter"},
+{id:59,cat:"Growth",mn:"Ya Allah, let my growth inspire the people around me.",gr:"inspiring others"},
+{id:60,cat:"Growth",mn:"Ya Allah, make the best version of me something I live — not just dream about.",gr:"becoming not just dreaming"},
+// 💍 MARRIAGE — Still Waiting
+{id:61,cat:"Marriage",mn:"Ya Allah, You already know the name of the person You have written for me. Bring him to me in the most beautiful and halal way.",gr:"trusting Allah's plan",rf:"If you are still waiting — this du'a is for you. He is written. Trust the Writer."},
+{id:62,cat:"Marriage",mn:"Ya Allah, while I wait — grow me into the woman my future spouse deserves to come home to.",gr:"becoming ready"},
+{id:63,cat:"Marriage",mn:"Ya Allah, protect my future husband wherever he is right now. Guide him, strengthen his deen and prepare his heart for me.",gr:"du'a for future spouse"},
+{id:64,cat:"Marriage",mn:"Ya Allah, don't let loneliness make me rush into what is not meant for me.",gr:"patience in waiting"},
+{id:65,cat:"Marriage",mn:"Ya Allah, make my nikkah easy, blessed and full of barakah.",gr:"ease in marriage"},
+{id:66,cat:"Marriage",mn:"Ya Allah, unite me with someone who makes me love You more — not less.",gr:"deen-centered marriage"},
+{id:67,cat:"Marriage",mn:"Ya Allah, if what I am asking for is not good for my deen and my akhirah — give me something better.",gr:"complete trust in Allah"},
+// 💍 MARRIAGE — Already Married
+{id:68,cat:"Marriage",ar:"رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا قُرَّةَ أَعْيُنٍ",tr:"Rabbana hab lana min azwajina qurrata a'yunin",mn:"Ya Allah, fill my marriage with mawaddah, rahmah and barakah.",gr:"love & mercy in marriage",rf:"A good marriage is a co-journey to Allah. Ask Him to keep blessing yours every single day."},
+{id:69,cat:"Marriage",mn:"Ya Allah, make my spouse and I each other's greatest support on this journey to You.",gr:"partnership in deen"},
+{id:70,cat:"Marriage",mn:"Ya Allah, protect our marriage from every external and internal harm.",gr:"protection of marriage"},
+{id:71,cat:"Marriage",mn:"Ya Allah, when we disagree — soften our hearts towards each other.",gr:"softness in conflict"},
+{id:72,cat:"Marriage",mn:"Ya Allah, make us a team in this dunya and neighbors in Jannah.",gr:"together in Jannah"},
+{id:73,cat:"Marriage",mn:"Ya Allah, grow our love every single day — make it deeper than the day we said yes to each other.",gr:"growing love"},
+{id:74,cat:"Marriage",mn:"Ya Allah, make our home a place of sakeenah, laughter and Your remembrance.",gr:"home of sakeenah"},
+{id:75,cat:"Marriage",mn:"Ya Allah, never let shaytaan find a way between us.",gr:"protecting the bond"},
+{id:76,cat:"Marriage",mn:"Ya Allah, let us be the answer to each other's du'as.",gr:"beautiful partnership"},
+// 🌸 CHILDREN — Still Waiting
+{id:77,cat:"Children",ar:"رَبِّ هَبْ لِي مِن لَّدُنكَ ذُرِّيَّةً طَيِّبَةً",tr:"Rabbi hab li min ladunka dhurriyyatan tayyibah",mn:"Ya Allah, You are Al-Wahhab — grant me righteous children who will be the coolness of my eyes.",gr:"du'a for children",rf:"Zakariyya (AS) made this du'a in old age when all seemed impossible. Allah gave him Yahya (AS). Nothing is impossible."},
+{id:78,cat:"Children",mn:"Ya Allah, if You have written motherhood for me — make it easy, healthy and filled with barakah.",gr:"ease in motherhood"},
+{id:79,cat:"Children",mn:"Ya Allah, heal every heartbreak that has come with waiting. You hear every silent cry.",gr:"healing in the wait"},
+{id:80,cat:"Children",mn:"Ya Allah, in this waiting — don't let me lose hope in Your mercy.",gr:"hope in Allah's mercy"},
+{id:81,cat:"Children",mn:"Ya Allah, whatever You decide for me — let me find peace and contentment in it. You always know best.",gr:"contentment with qadar"},
+// 🌸 CHILDREN — Already a Mother
+{id:82,cat:"Children",mn:"Ya Allah, make me a mother who raises children who love You deeply.",gr:"raising believers"},
+{id:83,cat:"Children",mn:"Ya Allah, protect my children from every harm — seen and unseen.",gr:"protection of children"},
+{id:84,cat:"Children",mn:"Ya Allah, guide my children to Islam and keep them firm on the straight path all their lives.",gr:"children's guidance"},
+{id:85,cat:"Children",mn:"Ya Allah, make me patient, gentle and present with my children — even on my hardest days.",gr:"patient motherhood"},
+{id:86,cat:"Children",mn:"Ya Allah, forgive me for every moment I fell short as a mother.",gr:"forgiveness in parenting"},
+{id:87,cat:"Children",mn:"Ya Allah, make my children a sadaqah jariyah for me after I am gone.",gr:"sadaqah jariyah"},
+{id:88,cat:"Children",mn:"Ya Allah, protect my children's hearts, minds and faith in a world that is trying to pull them away from You.",gr:"protecting faith"},
+{id:89,cat:"Children",mn:"Ya Allah, grant my children spouses who will be good for their deen and their happiness.",gr:"righteous spouses for children"},
+{id:90,cat:"Children",mn:"Ya Allah, reunite me with my children in Jannatul Firdaus. 🤍",gr:"reunion in Jannah"},
+// 🌸 AKHIRA
+{id:91,cat:"Akhira",mn:"Ya Allah, make my last deeds my best deeds.",gr:"khusnul khatimah"},
+{id:92,cat:"Akhira",mn:"Ya Allah, make the grave a place of peace and light for me.",gr:"peace in the grave"},
+{id:93,cat:"Akhira",mn:"Ya Allah, protect me from the punishment of the grave and the punishment of hellfire.",gr:"protection from punishment"},
+{id:94,cat:"Akhira",mn:"Ya Allah, make me of the people of Jannah — without any reckoning.",gr:"Jannah without reckoning"},
+{id:95,cat:"Akhira",mn:"Ya Allah, on the Day when everything is exposed — cover my sins and protect my dignity.",gr:"sins covered on Judgment Day"},
+{id:96,cat:"Akhira",mn:"Ya Allah, make my scale of good deeds heavy on the Day of Judgement.",gr:"heavy scales of good"},
+{id:97,cat:"Akhira",mn:"Ya Allah, grant me the shade of Your Arsh on the Day there is no shade but Yours.",gr:"shade of the Arsh"},
+{id:98,cat:"Akhira",mn:"Ya Allah, let me drink from the hand of our beloved Prophet ﷺ at Al-Kawthar and never be thirsty again.",gr:"Al-Kawthar"},
+{id:99,cat:"Akhira",ar:"اللَّهُمَّ إِنِّي أَسْأَلُكَ الْفِرْدَوْسَ الْأَعْلَى",tr:"Allahumma inni as'alukal-firdawsal-a'la",mn:"Ya Allah, grant me the highest levels of Jannah — Firdaus Al-A'la.",gr:"Firdaus Al-A'la",rf:"Don't ask for just 'Jannah'. Ask for the best of it. Allah loves ambition in du'a."},
+{id:100,cat:"Akhira",mn:"Ya Allah, let me see Your face in Jannah — make that the greatest reward of all. 🤍",gr:"seeing Allah in Jannah"},
+{id:101,cat:"Akhira",mn:"Ya Allah, reunite me in Jannah with every person I have loved in this dunya.",gr:"reunion of loved ones"},
+{id:102,cat:"Akhira",mn:"Ya Allah, grant my parents, my family and every sister reading this Jannah.",gr:"Jannah for all"},
+{id:103,cat:"Akhira",mn:"Ya Allah, don't let the dunya distract me from preparing for what is eternal.",gr:"focus on akhirah"},
+{id:104,cat:"Akhira",mn:"Ya Allah, make every good deed I do today a sadaqah jariyah that follows me after I am gone.",gr:"sadaqah jariyah"},
+{id:105,cat:"Akhira",mn:"Ya Allah, when my time comes — let me leave this world with You pleased with me.",gr:"dying with Allah's pleasure"},
+// 🌍 UMMAH & WAR ZONES
+{id:106,cat:"Ummah",mn:"Ya Allah, end every war that is consuming our ummah right now.",gr:"end of war"},
+{id:107,cat:"Ummah",mn:"Ya Allah, free Palestine. Grant our brothers and sisters in Gaza victory, relief and Jannah. 🤍",gr:"free Palestine"},
+{id:108,cat:"Ummah",mn:"Ya Allah, don't let the world's silence become our silence — keep their pain in our hearts and on our tongues.",gr:"keeping Palestine alive in hearts"},
+{id:109,cat:"Ummah",mn:"Ya Allah, ease the suffering of our brothers and sisters in Sudan — end the violence, the hunger and the fear.",gr:"Sudan"},
+{id:110,cat:"Ummah",mn:"Ya Allah, protect every child in Gaza and Sudan who is growing up knowing nothing but war.",gr:"protection of children in war"},
+{id:111,cat:"Ummah",mn:"Ya Allah, have mercy on every Muslim who is suffering in Palestine, Sudan, Congo, Kashmir, Syria, Yemen, Myanmar and every place we don't even hear about.",gr:"mercy for all oppressed"},
+{id:112,cat:"Ummah",mn:"Ya Allah, protect the children — the ones who have lost everything and the ones who never got a chance to live.",gr:"children of war"},
+{id:113,cat:"Ummah",mn:"Ya Allah, grant the shahadah to those who have died in Your cause and make them of the highest in Jannah.",gr:"honor of the martyrs"},
+{id:114,cat:"Ummah",mn:"Ya Allah, reunite the families that have been torn apart.",gr:"reunion of families"},
+{id:115,cat:"Ummah",mn:"Ya Allah, ease the hunger, the thirst, the cold and the fear of every person living in a war zone right now.",gr:"relief from suffering"},
+{id:116,cat:"Ummah",mn:"Ya Allah, restore the dignity of every person who has been humiliated and oppressed.",gr:"dignity restored"},
+{id:117,cat:"Ummah",mn:"Ya Allah, You are Al-Adl — the Most Just. Bring justice to the oppressed and hold the oppressors accountable.",gr:"divine justice"},
+{id:118,cat:"Ummah",mn:"Ya Allah, You are Al-Qahhar — the Subduer. Subdue every tyrant who raises his hand against the innocent.",gr:"Al-Qahhar"},
+{id:119,cat:"Ummah",mn:"Ya Allah, You are Al-Nasir — the Helper. Be their Helper when no one else will.",gr:"Al-Nasir"},
+{id:120,cat:"Ummah",mn:"Ya Allah, make this Laylatul Qadr the night You decree their freedom. Ameen.",gr:"decree of freedom"},
+{id:121,cat:"Ummah",mn:"Ya Allah, guide us to help in whatever way we can — with our du'a, our wealth, our voice and our actions.",gr:"action for the ummah"},
+{id:122,cat:"Ummah",mn:"Ya Allah, make us an ummah that feels each other's pain — because Your Prophet ﷺ told us we are one body.",gr:"unity of ummah"},
+{id:123,cat:"Ummah",mn:"Ya Allah, grant us victory. Not just on the battlefield — but in our hearts, our unity and our return to You.",gr:"victory of the ummah"},
+// 🤲 LOVED ONES
+{id:124,cat:"Loved Ones",mn:"Ya Allah, guide my family and keep them close to You.",gr:"family guidance"},
+{id:125,cat:"Loved Ones",ar:"رَبِّ اغْفِرْ لِي وَلِوَالِدَيَّ",tr:"Rabbi-ghfir li wa li-walidayya",mn:"Ya Allah, grant my parents Jannah and make me a source of joy for them.",gr:"du'a for parents",rf:"Your parents' du'a for you is never rejected. Return the favour on the holiest night."},
+{id:126,cat:"Loved Ones",mn:"Ya Allah, grant every sister reading this exactly what she is making du'a for tonight.",gr:"du'a for all sisters"},
+{id:127,cat:"Loved Ones",mn:"Ya Allah, ease the hardship of every Muslim who is suffering right now.",gr:"ease for the suffering"},
+{id:128,cat:"Loved Ones",mn:"Ya Allah, protect the ummah and grant us unity and strength.",gr:"unity & strength"},
+];
+
+// ─── STATE ───
+let activeCat = "All", query = "", checked = {}, expanded = {}, customs = [], nextId = 1000, pulseSet = new Set(), toastTimer;
+const all = () => [...DUAS, ...customs];
+
+// ─── SPLASH ───
+window.addEventListener('load', () => {
+  setTimeout(() => {
+    document.getElementById('splash').classList.add('hide');
+    setTimeout(() => document.getElementById('splash').style.display = 'none', 800);
+  }, 2200);
+});
+
+// ─── PWA INSTALL ───
+let deferredPrompt;
+window.addEventListener('beforeinstallprompt', e => {
+  e.preventDefault();
+  deferredPrompt = e;
+  document.getElementById('install-banner').classList.add('visible');
+});
+document.getElementById('install-btn').addEventListener('click', async () => {
+  if (!deferredPrompt) return;
+  deferredPrompt.prompt();
+  const { outcome } = await deferredPrompt.userChoice;
+  deferredPrompt = null;
+  document.getElementById('install-banner').classList.remove('visible');
+});
+function dismissInstall() {
+  document.getElementById('install-banner').classList.remove('visible');
+}
+window.addEventListener('appinstalled', () => {
+  document.getElementById('install-banner').classList.remove('visible');
+});
+
+// ─── SHARE ───
+function shareApp() {
+  const text = `🌙 Laylatul Qadr Du'as for the Muslimah Becoming Her Best Self\nby @ummazrahcreatives\n\n128 du'as across Deen, Mind, Heart, Body, Rizq, Growth, Marriage, Children, Akhira, Ummah & Loved Ones.\n\nFree. For the whole ummah. 🤍\n\nMade by @ummazrahcreatives on Threads 🧵`;
+  if (navigator.share) {
+    navigator.share({ title: "Qadr Du'as · ummazrahcreatives", text, url: window.location.href }).catch(() => {});
+  } else {
+    navigator.clipboard.writeText(text + '\n\n' + window.location.href).then(() => {
+      showToast('share', '🔗', 'Link copied!', 'Share it with your community. May Allah reward you.');
+    });
+  }
+}
+
+// ─── TABS ───
+function buildTabs() {
+  const cats = ["All", ...Object.keys(CM)];
+  document.getElementById('cat-tabs').innerHTML = cats.map(c => {
+    const m = CM[c], cnt = c === "All" ? all().length : all().filter(d => d.cat === c).length;
+    return `<button class="cat-pill ${activeCat===c?'active':''}" onclick="setTab('${c}')">${m?m.icon+' ':''}${c}<span class="cnt">${cnt}</span></button>`;
+  }).join('');
+}
+function setTab(cat) {
+  activeCat = cat;
+  document.getElementById('search-box').value = '';
+  query = '';
+  render();
+}
+function onSearch() {
+  query = document.getElementById('search-box').value.toLowerCase();
+  render();
+}
+
+// ─── FILTER ───
+function filtered() {
+  let list = activeCat === "All" ? all() : all().filter(d => d.cat === activeCat);
+  if (query) list = list.filter(d =>
+    (d.mn||'').toLowerCase().includes(query) ||
+    (d.gr||'').toLowerCase().includes(query) ||
+    (d.cat||'').toLowerCase().includes(query) ||
+    (d.tr||'').toLowerCase().includes(query)
+  );
+  return list;
+}
+
+// ─── CARD ───
+function cardHTML(d, i) {
+  const m = CM[d.cat] || CM["Personal"];
+  const done = checked[d.id], exp = expanded[d.id], pulse = pulseSet.has(d.id), custom = d.id >= 1000;
+  return `<div class="dcard ${done?'done':''}" data-cat="${d.cat}" style="animation-delay:${i*0.04}s">
+    <div class="dcard-glow"></div>
+    <div class="dcard-top">
+      <div>
+        <span class="dcard-badge" style="color:${m.c};border-color:${m.b};background:${m.p}">${m.icon} ${d.cat}${custom?'<span class="custom-tag">MY DU\'A</span>':''}</span>
+        ${d.gr?`<div class="dcard-growth">↗ ${d.gr}</div>`:''}
+      </div>
+      <button class="check-btn ${done?'done':''}" onclick="doCheck(${d.id})" aria-label="Mark as recited">
+        <span class="check-icon">✓</span>
+        ${pulse?'<div class="pulse-ring"></div>':''}
+      </button>
+    </div>
+    ${d.ar?`<div class="dcard-arabic">${d.ar}</div>`:''}
+    ${d.tr?`<div class="dcard-translit">${d.tr}</div>`:''}
+    ${(d.ar||d.tr)?'<div class="dcard-hr"></div>':''}
+    <div class="dcard-meaning">${d.mn}</div>
+    ${d.gr?`<div class="dcard-pill" style="color:${m.c};border-color:${m.b};background:${m.p}">↗ ${d.gr}</div>`:''}
+    ${d.rf?`
+      <button class="reflect-toggle" onclick="doExpand(${d.id})">${exp?'▲ Hide':'▼ Reflect'} on this du'a</button>
+      <div class="reflect-box ${exp?'open':''}">
+        <div class="reflect-inner">
+          <div class="reflect-lbl">✦ Self-Growth Reflection</div>
+          <div class="reflect-txt">${d.rf}</div>
+        </div>
+      </div>`:''}
+  </div>`;
+}
+
+// ─── RENDER ───
+function render() {
+  buildTabs();
+  const list = filtered();
+  const secMeta = activeCat === "All" ? null : CM[activeCat];
+  document.getElementById('sec-lbl').textContent = activeCat === "All"
+    ? `All Du'as · ${list.length} total`
+    : `${secMeta?.icon||''} ${activeCat} · ${list.length} du'as`;
+  document.getElementById('grid').innerHTML = list.length
+    ? list.map(cardHTML).join('')
+    : `<div class="empty-st"><span>🔍</span>No du'as found. Try a different search or add your own below.</div>`;
+  updateProgress();
+}
+
+// ─── CHECK ───
+function doCheck(id) {
+  checked[id] = !checked[id];
+  if (checked[id]) {
+    pulseSet.add(id);
+    setTimeout(() => { pulseSet.delete(id); render(); }, 800);
+    const d = all().find(x => x.id === id);
+    const msgs = ["May Allah accept it. 🤲","The angels say Ameen with you.","Your du'a is heard. Keep going.","Allah is closer than your jugular vein. 💛","Every sincere du'a is never wasted."];
+    showToast('check', CM[d?.cat]?.icon||'🌙', "Du'a recited — Ameen!", msgs[Math.floor(Math.random()*msgs.length)]);
+  }
+  render();
+  const done = Object.values(checked).filter(Boolean).length;
+  if (done === all().length && done > 0) setTimeout(showModal, 600);
+}
+function doExpand(id) { expanded[id] = !expanded[id]; render(); }
+
+// ─── PROGRESS ───
+function updateProgress() {
+  const total = all().length, done = Object.values(checked).filter(Boolean).length;
+  const pct = total ? Math.round(done/total*100) : 0;
+  document.getElementById('s-done').textContent = done;
+  document.getElementById('s-total').textContent = total;
+  document.getElementById('s-pct').textContent = pct + '%';
+  const fill = document.getElementById('prog-fill');
+  fill.style.width = pct + '%';
+  fill.style.setProperty('--prog-dot', pct > 0 ? 'block' : 'none');
+}
+
+// ─── ADD CUSTOM ───
+function addCustom() {
+  const mn = document.getElementById('nmn').value.trim();
+  if (!mn) { alert("Please write your du'a before adding."); return; }
+  customs.push({
+    id: nextId++,
+    cat: document.getElementById('nc').value,
+    ar: document.getElementById('nar').value.trim(),
+    tr: document.getElementById('ntr').value.trim(),
+    mn,
+    gr: document.getElementById('ntag').value.trim() || "personal intention",
+    rf: document.getElementById('nrf').value.trim(),
+  });
+  ['nar','ntr','nmn','ntag','nrf'].forEach(id => document.getElementById(id).value = '');
+  activeCat = document.getElementById('nc').value;
+  render();
+  showToast('add', '✨', "Du'a added!", "May Allah answer this from your heart. Ameen.");
+  setTimeout(() => document.getElementById('grid').lastElementChild?.scrollIntoView({behavior:'smooth',block:'center'}), 200);
+}
+
+// ─── TOAST ───
+function showToast(type, ico, title, sub) {
+  document.getElementById('t-ico').textContent = ico;
+  document.getElementById('t-title').textContent = title;
+  document.getElementById('t-sub').textContent = sub;
+  const t = document.getElementById('toast');
+  t.classList.add('show');
+  clearTimeout(toastTimer);
+  toastTimer = setTimeout(() => t.classList.remove('show'), 3200);
+}
+
+// ─── MODAL ───
+function showModal() { document.getElementById('modal').classList.add('show'); }
+function closeModal() { document.getElementById('modal').classList.remove('show'); }
+
+
+// ─── THEME TOGGLE ───
+let isDark = true;
+function toggleTheme() {
+  isDark = !isDark;
+  document.documentElement.classList.toggle('light', !isDark);
+  document.getElementById('theme-toggle').textContent = isDark ? '🌙' : '☀️';
+  try { localStorage.setItem('qadr_theme', isDark ? 'dark' : 'light'); } catch(e){}
+}
+// Restore saved theme
+try {
+  const saved = localStorage.getItem('qadr_theme');
+  if (saved === 'light') { isDark = false; document.documentElement.classList.add('light'); document.getElementById('theme-toggle').textContent = '☀️'; }
+} catch(e){}
+
+// ─── NAVIGATION ───
+function navTo(page, btn) {
+  document.querySelectorAll('.page').forEach(p => p.classList.remove('active'));
+  document.querySelectorAll('.nav-btn').forEach(b => b.classList.remove('active'));
+  document.getElementById('page-' + page).classList.add('active');
+  btn.classList.add('active');
+  window.scrollTo(0, 0);
+  if (page === 'authentic') renderAuthPage();
+  if (page === 'dhikr') renderDhikrPage();
+  if (page === 'heart') renderHeartPage();
+  if (page === 'planner') renderPlannerPage();
+}
+
+// ══════════════════════════════════════════
+// AUTHENTIC DU'AS FROM QUR'AN & SUNNAH
+// ══════════════════════════════════════════
+const AUTH_DUAS = [
+  // QUR'AN
+  {id:'a1',src:'Quran',ref:'Surah Al-Baqarah 2:286',arabic:'رَبَّنَا لَا تُؤَاخِذْنَا إِن نَّسِينَا أَوْ أَخْطَأْنَا',translit:"Rabbana la tu'akhidhna in nasina aw akhta'na",meaning:"Our Lord, do not take us to account if we forget or make a mistake.",note:"Allah replied to this du'a saying: 'I have done so.' — Sahih Muslim"},
+  {id:'a2',src:'Quran',ref:'Surah Al-Baqarah 2:286',arabic:'رَبَّنَا وَلَا تَحْمِلْ عَلَيْنَا إِصْرًا كَمَا حَمَلْتَهُ عَلَى الَّذِينَ مِن قَبْلِنَا',translit:"Rabbana wa la tahmil 'alayna isran kama hamaltahu 'alal-ladhina min qablina",meaning:"Our Lord, do not burden us as You burdened those before us.",note:"From the closing du'as of Surah Al-Baqarah — recited every night by the Prophet ﷺ. Bukhari & Muslim"},
+  {id:'a3',src:'Quran',ref:'Surah Al-Baqarah 2:286',arabic:'رَبَّنَا وَلَا تُحَمِّلْنَا مَا لَا طَاقَةَ لَنَا بِهِ وَاعْفُ عَنَّا وَاغْفِرْ لَنَا وَارْحَمْنَا',translit:"Rabbana wa la tuhammilna ma la taqata lana bih. Wa'fu 'anna, wa-ghfir lana, wa-rhamna",meaning:"Our Lord, do not burden us with more than we can bear. Pardon us, forgive us, and have mercy on us. You are our protector.",note:"Surah Al-Baqarah 2:286 — one of the greatest duas in the entire Quran"},
+  {id:'a4',src:'Quran',ref:'Surah Al-Imran 3:8',arabic:'رَبَّنَا لَا تُزِغْ قُلُوبَنَا بَعْدَ إِذْ هَدَيْتَنَا وَهَبْ لَنَا مِن لَّدُنكَ رَحْمَةً',translit:"Rabbana la tuzigh qulubana ba'da idh hadaytana wa hab lana min ladunka rahmah",meaning:"Our Lord, do not let our hearts deviate after You have guided us. Grant us Your mercy — You are the Bestower.",note:"Al-Imran 3:8 — the du'a of those firmly grounded in knowledge"},
+  {id:'a5',src:'Quran',ref:'Surah Al-Imran 3:147',arabic:'رَبَّنَا اغْفِرْ لَنَا ذُنُوبَنَا وَإِسْرَافَنَا فِي أَمْرِنَا وَثَبِّتْ أَقْدَامَنَا وَانصُرْنَا',translit:"Rabbana-ghfir lana dhunubana wa israfana fi amrina wa thabbit aqdamana wansurna",meaning:"Our Lord, forgive our sins and our excesses. Make our feet firm and grant us victory.",note:"Al-Imran 3:147 — the du'a of the patient believers"},
+  {id:'a6',src:'Quran',ref:"Surah Al-A'raf 7:23",arabic:'رَبَّنَا ظَلَمْنَا أَنفُسَنَا وَإِن لَّمْ تَغْفِرْ لَنَا وَتَرْحَمْنَا لَنَكُونَنَّ مِنَ الْخَاسِرِينَ',translit:"Rabbana zalamna anfusana wa in lam taghfir lana wa tarhamna lanakunanna minal-khasirin",meaning:"Our Lord, we have wronged ourselves. If You do not forgive us and have mercy on us, we will surely be among the losers.",note:"Al-A'raf 7:23 — the du'a of Adam and Hawwa (AS). A complete admission and surrender."},
+  {id:'a7',src:'Quran',ref:'Surah Ibrahim 14:40-41',arabic:'رَبِّ اجْعَلْنِي مُقِيمَ الصَّلَاةِ وَمِن ذُرِّيَّتِي رَبَّنَا وَتَقَبَّلْ دُعَاءِ',translit:"Rabbi-j'alni muqimas-salati wa min dhurriyyati. Rabbana wa taqabbal du'a",meaning:"My Lord, make me one who establishes prayer, and my descendants. Our Lord, accept my supplication.",note:"Ibrahim 14:40 — the du'a of Prophet Ibrahim (AS) for himself and his children"},
+  {id:'a8',src:'Quran',ref:'Surah Al-Kahf 18:10',arabic:'رَبَّنَا آتِنَا مِن لَّدُنكَ رَحْمَةً وَهَيِّئْ لَنَا مِنْ أَمْرِنَا رَشَدًا',translit:"Rabbana atina min ladunka rahmatan wa hayyi' lana min amrina rashada",meaning:"Our Lord, grant us mercy from Yourself and guide us rightly in our affairs.",note:"Al-Kahf 18:10 — the du'a of the People of the Cave before they slept for 300 years"},
+  {id:'a9',src:'Quran',ref:"Surah Al-Anbiya 21:83",arabic:'رَبِّ إِنِّي مَسَّنِيَ الضُّرُّ وَأَنتَ أَرْحَمُ الرَّاحِمِينَ',translit:"Rabbi inni massaniyad-durru wa anta arhamur-rahimin",meaning:"My Lord, adversity has touched me, and You are the Most Merciful of the merciful.",note:"Al-Anbiya 21:83 — the du'a of Ayyub (AS) after years of illness. Allah answered and removed all his suffering."},
+  {id:'a10',src:'Quran',ref:"Surah Al-Anbiya 21:87",arabic:'لَّا إِلَٰهَ إِلَّا أَنتَ سُبْحَانَكَ إِنِّي كُنتُ مِنَ الظَّالِمِينَ',translit:"La ilaha illa anta subhanaka inni kuntu minaz-zalimin",meaning:"There is no deity except You; exalted are You. Indeed, I have been of the wrongdoers.",note:"Al-Anbiya 21:87 — the du'a of Yunus (AS) in the belly of the whale. The Prophet ﷺ said no Muslim makes this du'a except Allah answers them. — Tirmidhi"},
+  {id:'a11',src:'Quran',ref:"Surah Al-Furqan 25:74",arabic:'رَبَّنَا هَبْ لَنَا مِنْ أَزْوَاجِنَا وَذُرِّيَّاتِنَا قُرَّةَ أَعْيُنٍ وَاجْعَلْنَا لِلْمُتَّقِينَ إِمَامًا',translit:"Rabbana hab lana min azwajina wa dhurriyyatina qurrata a'yunin waj'alna lil-muttaqina imama",meaning:"Our Lord, grant us from our spouses and offspring comfort to our eyes, and make us leaders of the righteous.",note:"Al-Furqan 25:74 — the du'a of the servants of the Most Merciful"},
+  {id:'a12',src:'Quran',ref:"Surah Ghafir 40:7-9",arabic:'رَبَّنَا وَسِعْتَ كُلَّ شَيْءٍ رَّحْمَةً وَعِلْمًا فَاغْفِرْ لِلَّذِينَ تَابُوا وَاتَّبَعُوا سَبِيلَكَ',translit:"Rabbana wasi'ta kulla shay'in rahmatan wa 'ilman faghfir lilladhina tabu wattaba'u sabilak",meaning:"Our Lord, You encompass all things in mercy and knowledge, so forgive those who have repented and followed Your path.",note:"Ghafir 40:7 — the du'a of the angels on behalf of the believers"},
+  // SUNNAH
+  {id:'a13',src:'Sunnah',ref:'Sahih Muslim 2697',arabic:'اللَّهُمَّ إِنَّكَ عَفُوٌّ تُحِبُّ الْعَفْوَ فَاعْفُ عَنِّي',translit:"Allahumma innaka 'afuwwun tuhibbul-'afwa fa'fu 'anni",meaning:"O Allah, You are Pardoning and You love pardon, so pardon me.",note:"Aisha (RA) asked: 'What du'a should I make on Laylatul Qadr?' The Prophet ﷺ taught her this. — Tirmidhi (Hasan Sahih). THE du'a for tonight."},
+  {id:'a14',src:'Sunnah',ref:'Sahih Bukhari 6307',arabic:'اللَّهُمَّ أَنْتَ رَبِّي لَا إِلَهَ إِلَّا أَنْتَ خَلَقْتَنِي وَأَنَا عَبْدُكَ',translit:"Allahumma anta rabbi la ilaha illa anta, khalaqtani wa ana 'abduk",meaning:"O Allah, You are my Lord. There is no god but You. You created me and I am Your servant.",note:"Sayyidul Istighfar — the Master of Forgiveness. The Prophet ﷺ said: whoever says this in the morning with conviction and dies that day enters Jannah. — Bukhari"},
+  {id:'a15',src:'Sunnah',ref:'Sahih Muslim 2723',arabic:'سُبْحَانَكَ اللَّهُمَّ وَبِحَمْدِكَ أَشْهَدُ أَنْ لَا إِلَهَ إِلَّا أَنْتَ أَسْتَغْفِرُكَ وَأَتُوبُ إِلَيْكَ',translit:"Subhanakal-lahumma wa bihamdika ashhadu an la ilaha illa anta astaghfiruka wa atubu ilayk",meaning:"Glory and praise be to You, O Allah. I testify there is no god but You. I seek Your forgiveness and repent to You.",note:"Kaffaratul Majlis — the expiation for gatherings. Recited by the Prophet ﷺ to close every sitting. Muslim."},
+  {id:'a16',src:'Sunnah',ref:'Sunan Abu Dawud 1510',arabic:'اللَّهُمَّ إِنِّي أَعُوذُ بِكَ مِنَ الْهَمِّ وَالْحَزَنِ وَأَعُوذُ بِكَ مِنَ الْعَجْزِ وَالْكَسَلِ',translit:"Allahumma inni a'udhu bika minal-hammi wal-hazan, wa a'udhu bika minal-'ajzi wal-kasal",meaning:"O Allah, I seek refuge in You from anxiety and grief, and I seek refuge in You from incapacity and laziness.",note:"The full du'a continues: 'from cowardice and miserliness, from being overcome by debt, and from the overpowering of men.' — Abu Dawud (Sahih)"},
+  {id:'a17',src:'Sunnah',ref:'Jami at-Tirmidhi 3578',arabic:'اللَّهُمَّ إِنِّي أَسْأَلُكَ الْهُدَى وَالتُّقَى وَالْعَفَافَ وَالْغِنَى',translit:"Allahumma inni as'alukal-huda wat-tuqa wal-'afafa wal-ghina",meaning:"O Allah, I ask You for guidance, God-consciousness, chastity and self-sufficiency.",note:"Tirmidhi (Hasan Sahih) — four things that are the foundation of a life well-lived before Allah."},
+  {id:'a18',src:'Sunnah',ref:'Sahih Muslim 2721',arabic:'اللَّهُمَّ أَصْلِحْ لِي دِينِيَ الَّذِي هُوَ عِصْمَةُ أَمْرِي وَأَصْلِحْ لِي دُنْيَايَ الَّتِي فِيهَا مَعَاشِي',translit:"Allahumma aslih li diniyalladhi huwa 'ismatu amri, wa aslih li dunyaya allati fiha ma'ashi",meaning:"O Allah, rectify my religion which is the safeguard of my affairs, rectify my worldly life in which is my livelihood, rectify my Hereafter to which is my return.",note:"Muslim — a comprehensive du'a for deen, dunya and akhira all at once."},
+  {id:'a19',src:'Sunnah',ref:'Sahih Muslim 2691',arabic:'اللَّهُمَّ اغْفِرْ لِي خَطِيئَتِي وَجَهْلِي وَإِسْرَافِي فِي أَمْرِي',translit:"Allahumma-ghfir li khati'ati wa jahli wa israfi fi amri",meaning:"O Allah, forgive my sins, my ignorance, my excesses in my affairs, and what You know better about me than I do.",note:"The Prophet ﷺ would make this du'a. Muslim. — Complete forgiveness for every kind of sin."},
+  {id:'a20',src:'Sunnah',ref:'Sahih Bukhari 834',arabic:'اللَّهُمَّ إِنِّي ظَلَمْتُ نَفْسِي ظُلْمًا كَثِيرًا وَلَا يَغْفِرُ الذُّنُوبَ إِلَّا أَنتَ',translit:"Allahumma inni zalamtu nafsi zulman kathiran wa la yaghfirudh-dhunuba illa ant",meaning:"O Allah, I have greatly wronged myself and none forgives sins except You, so forgive me with Your forgiveness and have mercy on me.",note:"The du'a of Abu Bakr As-Siddiq (RA) — taught by the Prophet ﷺ. Bukhari & Muslim."},
+  {id:'a21',src:'Sunnah',ref:'Sahih Muslim 770',arabic:'اللَّهُمَّ لَكَ الْحَمْدُ أَنْتَ نُورُ السَّمَاوَاتِ وَالْأَرْضِ وَمَن فِيهِنَّ',translit:"Allahumma lakal-hamdu anta nurus-samawati wal-ardi wa man fihinn",meaning:"O Allah, to You belongs all praise. You are the Light of the heavens and the earth and all that is in them.",note:"From the long night prayer du'a of the Prophet ﷺ — Muslim. Said as he rose for Tahajjud."},
+  {id:'a22',src:'Sunnah',ref:"Ibn Majah 3830",arabic:'يَا حَيُّ يَا قَيُّومُ بِرَحْمَتِكَ أَسْتَغِيثُ',translit:"Ya Hayyu Ya Qayyumu bi-rahmatika astaghith",meaning:"O Ever-Living, O Sustainer — in Your mercy I seek relief.",note:"The Prophet ﷺ said Fatimah (RA) should say this morning and evening. Ibn Majah (Hasan). — Al-Hayy Al-Qayyum: Allah's two greatest Names."},
+  // MORNING & EVENING
+  {id:'a23',src:'Morning & Evening',ref:'Abu Dawud 5069',arabic:'بِسْمِ اللَّهِ الَّذِي لَا يَضُرُّ مَعَ اسْمِهِ شَيْءٌ فِي الْأَرْضِ وَلَا فِي السَّمَاءِ وَهُوَ السَّمِيعُ الْعَلِيمُ',translit:"Bismillahil-ladhi la yadurru ma'asmihi shay'un fil-ardi wa la fis-sama'i wa huwas-sami'ul-'alim",meaning:"In the name of Allah — with His name, nothing on earth or in the sky can cause harm, and He is the All-Hearing, All-Knowing.",note:"Whoever says this 3x in the morning and evening will not be afflicted by any calamity. — Abu Dawud, Tirmidhi (Sahih)"},
+  {id:'a24',src:'Morning & Evening',ref:'Sahih Muslim 2692',arabic:'اللَّهُمَّ عَافِنِي فِي بَدَنِي اللَّهُمَّ عَافِنِي فِي سَمْعِي وَبَصَرِي',translit:"Allahumma 'afini fi badani, Allahumma 'afini fi sam'i wa basari, Allahumma inni a'udhu bika minal-kufri wal-faqr",meaning:"O Allah, grant me health in my body. O Allah, grant me health in my hearing and sight. O Allah, I seek refuge in You from disbelief and poverty.",note:"Abu Bakr (RA) asked the Prophet ﷺ to teach him a morning & evening du'a. This is what he taught. — Abu Dawud (Sahih)"},
+  {id:'a25',src:'Morning & Evening',ref:"Sahih Bukhari 6306",arabic:'أَصْبَحْنَا وَأَصْبَحَ الْمُلْكُ لِلَّهِ رَبِّ الْعَالَمِينَ',translit:"Asbahna wa asbahal-mulku lillahi rabbil-'alamin",meaning:"We have entered the morning and at this very time unto Allah belongs all sovereignty, Lord of the worlds.",note:"Change to 'Amsayna' in the evening. The Prophet ﷺ would say this every morning — Bukhari."},
+];
+
+let authSource = 'All';
+let authChecked = {};
+
+function renderAuthPage() {
+  const sources = ['All', 'Quran', 'Sunnah', 'Morning & Evening'];
+  document.getElementById('source-tabs').innerHTML = sources.map(s =>
+    `<button class="source-pill ${authSource===s?'active':''}" onclick="setAuthSource('${s}')">${s==='Quran'?'📖 ':s==='Sunnah'?'🌿 ':s==='Morning & Evening'?'☀️ ':''}${s}</button>`
+  ).join('');
+  const list = authSource === 'All' ? AUTH_DUAS : AUTH_DUAS.filter(d => d.src === authSource);
+  document.getElementById('auth-grid').innerHTML = list.map((d,i) => {
+    const srcColor = d.src==='Quran'?'#e8c97a':d.src==='Sunnah'?'#6db88a':'#7aa0c9';
+    const srcBg = d.src==='Quran'?'rgba(232,201,122,0.1)':d.src==='Sunnah'?'rgba(109,184,138,0.1)':'rgba(122,160,201,0.1)';
+    const done = authChecked[d.id];
+    return `<div class="auth-card" style="animation-delay:${i*0.04}s">
+      <span class="auth-source-badge" style="color:${srcColor};background:${srcBg};border:1px solid ${srcColor}44">${d.src==='Quran'?'📖':d.src==='Sunnah'?'🌿':'☀️'} ${d.src}</span>
+      <button class="auth-check ${done?'done':''}" onclick="toggleAuthCheck('${d.id}')"><span class="tick">✓</span></button>
+      <div class="auth-arabic">${d.arabic}</div>
+      <div class="auth-translit">${d.translit}</div>
+      <div class="auth-hr"></div>
+      <div class="auth-meaning">${d.meaning}</div>
+      <div class="auth-ref"><span class="auth-ref-ico">📌</span><span class="auth-ref-text">${d.ref} — ${d.note}</span></div>
+    </div>`;
+  }).join('');
+}
+function setAuthSource(s) { authSource = s; renderAuthPage(); }
+function toggleAuthCheck(id) {
+  authChecked[id] = !authChecked[id];
+  if (authChecked[id]) showToast('auth', '📖', "Recited — Ameen!", "May Allah accept it and make it a light for you.");
+  renderAuthPage();
+}
+
+// ══════════════════════════════════════════
+// DHIKR COUNTER
+// ══════════════════════════════════════════
+const DHIKR_DATA = [
+  {id:'d1',arabic:'سُبْحَانَ اللَّهِ',name:'SubhanAllah',meaning:'Glory be to Allah',target:100,color:'#7aa0c9'},
+  {id:'d2',arabic:'الْحَمْدُ لِلَّهِ',name:'Alhamdulillah',meaning:'All praise is due to Allah',target:100,color:'#6db88a'},
+  {id:'d3',arabic:'اللَّهُ أَكْبَرُ',name:'Allahu Akbar',meaning:'Allah is the Greatest',target:100,color:'#c9a84c'},
+  {id:'d4',arabic:'لَا إِلَٰهَ إِلَّا اللَّهُ',name:'La ilaha illallah',meaning:'There is no god but Allah',target:100,color:'#e8c97a'},
+  {id:'d5',arabic:'أَسْتَغْفِرُ اللَّهَ',name:'Astaghfirullah',meaning:'I seek forgiveness from Allah',target:100,color:'#c97aa0'},
+  {id:'d6',arabic:'لَا حَوْلَ وَلَا قُوَّةَ إِلَّا بِاللَّهِ',name:"La hawla wa la quwwata illa billah",meaning:'There is no power except with Allah',target:100,color:'#5eb8a0'},
+  {id:'d7',arabic:'سُبْحَانَ اللَّهِ وَبِحَمْدِهِ',name:'SubhanAllahi wa bihamdih',meaning:'Glory and praise be to Allah',target:100,color:'#c9a84c'},
+  {id:'d8',arabic:'اللَّهُمَّ صَلِّ عَلَى مُحَمَّدٍ',name:"Salawat 'alan Nabi",meaning:'O Allah, send blessings upon Muhammad ﷺ',target:1000,color:'#e8c97a'},
+];
+let dhikrCounts = {};
+
+function renderDhikrPage() {
+  document.getElementById('dhikr-grid').innerHTML = DHIKR_DATA.map(d => {
+    const cnt = dhikrCounts[d.id] || 0;
+    const pct = Math.min(cnt / d.target * 100, 100);
+    const done = cnt >= d.target;
+    return `<div class="dhikr-card ${done?'complete':''}" id="dc-${d.id}">
+      <div class="dhikr-arabic">${d.arabic}</div>
+      <div class="dhikr-name">${d.name}</div>
+      <div class="dhikr-meaning">"${d.meaning}"</div>
+      <div class="dhikr-count-display" style="color:${done?'#4aaa72':d.color}">${cnt}</div>
+      <div class="dhikr-target">Target: ${d.target.toLocaleString()}×${done?' ✓ Complete!':''}</div>
+      <div class="dhikr-prog"><div class="dhikr-prog-fill" style="width:${pct}%;background:${done?'#4aaa72':d.color}"></div></div>
+      <button class="dhikr-tap-btn" onclick="tapDhikr('${d.id}')"
+        style="border-color:${d.color};background:${done?'rgba(74,170,114,0.15)':'rgba('+hexToRgb(d.color)+',0.1)'}">
+        ${done?'✓':'+'}
+      </button>
+      <button class="dhikr-reset" onclick="resetDhikr('${d.id}')">Reset</button>
+    </div>`;
+  }).join('');
+}
+function hexToRgb(hex) {
+  const r = parseInt(hex.slice(1,3),16), g = parseInt(hex.slice(3,5),16), b = parseInt(hex.slice(5,7),16);
+  return `${r},${g},${b}`;
+}
+function tapDhikr(id) {
+  const d = DHIKR_DATA.find(x => x.id === id);
+  const prev = dhikrCounts[id] || 0;
+  dhikrCounts[id] = prev + 1;
+  if (dhikrCounts[id] === d.target) showToast('dhikr', '📿', `${d.name} complete!`, `${d.target}× — MashaAllah! May Allah accept it.`);
+  renderDhikrPage();
+}
+function resetDhikr(id) { dhikrCounts[id] = 0; renderDhikrPage(); }
+
+// ══════════════════════════════════════════
+// HEART'S DESIRES
+// ══════════════════════════════════════════
+const PROMPTS = [
+  {id:'p1',ico:'🤍',q:"What is the one thing you are most afraid to ask Allah for — because part of you doesn't believe you deserve it?"},
+  {id:'p2',ico:'🌱',q:"What does the best version of you look like? What would she do differently tomorrow?"},
+  {id:'p3',ico:'💔',q:"What pain have you been carrying that you haven't fully given to Allah yet?"},
+  {id:'p4',ico:'🌙',q:"If Allah granted you one thing tonight that would change your life — what would it be?"},
+  {id:'p5',ico:'🤲',q:"Who do you want to make du'a for tonight? Name them. What do you specifically want Allah to do for them?"},
+  {id:'p6',ico:'✨',q:"What habit, version of yourself or chapter of life are you asking Allah to close tonight?"},
+  {id:'p7',ico:'🕌',q:"What is your biggest fear about your akhirah? Tell Allah. Ask Him directly."},
+  {id:'p8',ico:'💰',q:"What are you trusting Allah for financially that you haven't fully surrendered yet?"},
+  {id:'p9',ico:'🌸',q:"What do you want your marriage, your family, your home to look and feel like in 5 years?"},
+  {id:'p10',ico:'🌍',q:"For the ummah — what is on your heart right now? What do you want Allah to decree for them tonight?"},
+];
+let promptAnswers = {};
+let openPrompt = null;
+
+function renderHeartPage() {
+  document.getElementById('prompt-cards').innerHTML = PROMPTS.map(p => {
+    const isOpen = openPrompt === p.id;
+    return `<div class="prompt-card ${isOpen?'open':''}" id="pc-${p.id}">
+      <div class="prompt-header" onclick="togglePrompt('${p.id}')">
+        <span class="prompt-ico">${p.ico}</span>
+        <span class="prompt-q">${p.q}</span>
+        <span class="prompt-arrow">▼</span>
+      </div>
+      <div class="prompt-textarea-wrap">
+        <textarea class="prompt-textarea" id="pt-${p.id}" placeholder="Write honestly. This is between you and Allah. 🤍" oninput="savePrompt('${p.id}')">${promptAnswers[p.id]||''}</textarea>
+        <div class="prompt-saved ${promptAnswers[p.id]?'show':''}" id="ps-${p.id}">✓ Saved</div>
+      </div>
+    </div>`;
+  }).join('');
+  const letter = localStorage.getItem('qadr_letter') || '';
+  document.getElementById('letter-text').value = letter;
+}
+function togglePrompt(id) {
+  openPrompt = openPrompt === id ? null : id;
+  renderHeartPage();
+  if (openPrompt) setTimeout(() => document.getElementById('pc-'+id)?.scrollIntoView({behavior:'smooth',block:'center'}), 100);
+}
+function savePrompt(id) {
+  promptAnswers[id] = document.getElementById('pt-'+id).value;
+  const el = document.getElementById('ps-'+id);
+  if (el) { el.classList.add('show'); }
+}
+function saveLetter() {
+  try { localStorage.setItem('qadr_letter', document.getElementById('letter-text').value); } catch(e){}
+}
+
+// ══════════════════════════════════════════
+// NIGHT PLANNER
+// ══════════════════════════════════════════
+const NIGHTS_DATA = [
+  {n:21,odd:true,title:"Night 21 — Begin with Intention",desc:"The first of the last 10. The Prophet ﷺ would begin his I'tikaf on this night. Set your intention firmly.",hadith:"The Prophet ﷺ would tighten his belt, stay awake through the night, and wake his family during the last 10 nights. — Bukhari & Muslim",acts:[{ico:'🙏',t:'Pray Isha & Tarawih'},{ico:'🌙',t:'Pray at least 2 raka Tahajjud'},{ico:'📖',t:'Read Surah Al-Qadr (97)'},{ico:'📿',t:'100× Astaghfirullah'},{ico:'🤲',t:'Make du\'a for at least 15 mins'},{ico:'💝',t:'Give sadaqah — even ₱1'}]},
+  {n:22,odd:false,title:"Night 22 — Night of Gratitude",desc:"Spend extra time in shukr tonight. Count your blessings before asking for more.",hadith:"'Whoever does not thank people, does not thank Allah.' — Abu Dawud. Gratitude unlocks more.",acts:[{ico:'🙏',t:'Pray Isha & Tarawih'},{ico:'📿',t:'100× Alhamdulillah'},{ico:'📖',t:'Read Ayatul Kursi after every salah'},{ico:'✍️',t:'Write 10 things you\'re grateful for'},{ico:'🤲',t:'Du\'a for your parents specifically'},{ico:'🌙',t:'Pray 8 raka Tahajjud'}]},
+  {n:23,odd:true,title:"Night 23 — Night of Seeking",desc:"An odd night — Laylatul Qadr may be here. Don't sleep until you've asked for everything.",hadith:"The Prophet ﷺ said: 'Seek Laylatul Qadr in the odd nights of the last 10.' — Bukhari",acts:[{ico:'🙏',t:'Pray Isha & Tarawih'},{ico:'🌙',t:'Pray Tahajjud — stay up as long as you can'},{ico:'🤲',t:'Repeat the Laylatul Qadr du\'a 100×'},{ico:'📖',t:'Read Surah Yaseen'},{ico:'📿',t:'1000× Salawat on the Prophet ﷺ'},{ico:'💔',t:'Cry to Allah — let it all out'}]},
+  {n:24,odd:false,title:"Night 24 — Night of the Quran",desc:"Dedicate tonight to the Quran. Let it speak to your heart, not just your eyes.",hadith:"The Quran was revealed in the last 10 nights. Recite with understanding tonight.",acts:[{ico:'📖',t:'Read Surah Al-Baqarah or as much as you can'},{ico:'🙏',t:'Pray Isha & Tarawih'},{ico:'🌙',t:'Read the last 3 Surahs 3× each before sleeping'},{ico:'✍️',t:'Write one ayah that speaks to your heart'},{ico:'🤲',t:'Du\'a using names of Allah'},{ico:'📿',t:'Dhikr until you sleep'}]},
+  {n:25,odd:true,title:"Night 25 — Night of the Oppressed",desc:"An odd night. Tonight, don't forget Gaza, Sudan, and every corner of suffering. Your du'a matters.",hadith:"The Prophet ﷺ said: 'Fear the du\'a of the oppressed, for there is no barrier between it and Allah.' — Bukhari",acts:[{ico:'🌍',t:'Make du\'a specifically for Gaza & Sudan'},{ico:'🙏',t:'Pray Isha & Tarawih'},{ico:'💝',t:'Give sadaqah in their name'},{ico:'🤲',t:'Du\'a for the ummah for 20+ minutes'},{ico:'🌙',t:'Pray Tahajjud — use the Ummah du\'as'},{ico:'📖',t:'Read Surah Al-Mulk'}]},
+  {n:26,odd:false,title:"Night 26 — Night of Forgiveness",desc:"Turn inward tonight. Ask for deep, complete forgiveness. Leave no sin unaddressed.",hadith:"The Prophet ﷺ said: 'All of my ummah will be forgiven except those who sin openly.' — Bukhari. Tonight, ask in private.",acts:[{ico:'🙏',t:'Pray Isha & Tarawih with full focus'},{ico:'💔',t:'Make sincere tawbah — list your sins mentally'},{ico:'🤲',t:'Repeat Sayyidul Istighfar 100×'},{ico:'📿',t:'100× La ilaha illallah'},{ico:'✍️',t:'Write a letter of apology to Allah'},{ico:'🌙',t:'Pray 12 raka Tahajjud'}]},
+  {n:27,odd:true,title:"Night 27 — The Most Blessed Night",desc:"Most scholars consider this THE night. Maximize every moment. Sleep is secondary tonight.",hadith:"Ibn Abbas (RA) said Laylatul Qadr is the 27th night. — Ibn Abi Shaybah. Don't let this night pass without your best.",acts:[{ico:'🌙',t:'Stay awake the entire night if possible'},{ico:'🙏',t:'Pray Isha, Tarawih & long Tahajjud'},{ico:'🤲',t:'Du\'a marathon — use the full du\'a list'},{ico:'📖',t:'Complete reading of the Quran if possible'},{ico:'📿',t:'1000× Laylatul Qadr du\'a'},{ico:'💝',t:'Give your best sadaqah of the 10 nights'}]},
+  {n:28,odd:false,title:"Night 28 — Night of Peace",desc:"Come down gently. Rest and reflect. Review what Allah has moved in your heart.",hadith:"'And peace it is until the emergence of dawn.' — Quran 97:5. Let that peace enter your heart tonight.",acts:[{ico:'🙏',t:'Pray Isha & Tarawih'},{ico:'✍️',t:'Journal: What has changed in me this Ramadan?'},{ico:'🤲',t:'Du\'a of gratitude and peace'},{ico:'📿',t:'Morning & Evening adhkar in full'},{ico:'🌙',t:'Pray Tahajjud — gentle and long'},{ico:'📖',t:'Read Surah Al-Inshirah (94) — 10×'}]},
+  {n:29,odd:true,title:"Night 29 — The Last Odd Night",desc:"One of the last chances. Be intentional. Ask for everything you haven't asked for yet.",hadith:"'Seek Laylatul Qadr in the last 10 nights of Ramadan.' — Bukhari & Muslim. This may be it.",acts:[{ico:'🌙',t:'Pray Tahajjud — make it long'},{ico:'🙏',t:'Pray Isha & Tarawih'},{ico:'🤲',t:'Complete the full du\'a list from this app'},{ico:'💝',t:'Give sadaqah for the whole ummah'},{ico:'📿',t:'Continuous dhikr between salah'},{ico:'🤍',t:'Write your Heart\'s Desires letter to Allah'}]},
+  {n:30,odd:false,title:"Night 30 — The Night of Completion",desc:"The last night of Ramadan. End it better than you started it. Leave nothing unsaid to Allah.",hadith:"'Whoever fasts Ramadan with faith and seeking reward, all their past sins are forgiven.' — Bukhari. Complete it beautifully.",acts:[{ico:'🙏',t:'Pray Isha & Tarawih — savor every raka'},{ico:'🤲',t:'Long du\'a — make it comprehensive'},{ico:'📖',t:'Complete your Quran recitation'},{ico:'📿',t:'1000× Salawat on the Prophet ﷺ'},{ico:'💝',t:'Pay Zakat Al-Fitr if you haven\'t yet'},{ico:'✍️',t:'Write your intentions for after Ramadan'}]},
+];
+let activeNight = 27;
+let nightActivities = {};
+let nightNotes = {};
+
+function renderPlannerPage() {
+  document.getElementById('night-tabs').innerHTML = NIGHTS_DATA.map(nd =>
+    `<button class="night-pill ${nd.odd?'odd':''} ${activeNight===nd.n?'active':''}" onclick="setNight(${nd.n})">Night ${nd.n}${nd.odd?' ⭐':''}</button>`
+  ).join('');
+  const nd = NIGHTS_DATA.find(x => x.n === activeNight);
+  if (!nd) return;
+  const actsDone = nd.acts.filter((_,i) => (nightActivities[activeNight]||{})[i]).length;
+  document.getElementById('planner-content').innerHTML = `
+    <div class="night-card-hero" style="border-color:${nd.odd?'rgba(200,168,75,0.3)':'rgba(74,170,114,0.2)'}">
+      <div class="night-card-num">${nd.odd?'🌟':'🌙'} Night ${nd.n}</div>
+      <div class="night-card-label">${nd.odd?'Possible Laylatul Qadr ⭐':'Last 10 Nights'} · ${actsDone}/${nd.acts.length} done</div>
+      <div class="night-card-desc">${nd.title.split('—')[1]?.trim() || nd.title}</div>
+      <div class="night-card-hadith">📌 ${nd.hadith}</div>
+    </div>
+    <div class="activities-label">✦ Tonight's Ibadah Checklist</div>
+    <div class="activity-list">
+      ${nd.acts.map((a,i) => {
+        const done = (nightActivities[activeNight]||{})[i];
+        return `<div class="activity-item ${done?'done':''}" onclick="toggleAct(${activeNight},${i})">
+          <div class="activity-check">${done?'✓':''}</div>
+          <span class="activity-ico">${a.ico}</span>
+          <span class="activity-text">${a.t}</span>
+        </div>`;
+      }).join('')}
+    </div>
+    <div class="night-notes-label">✦ My Notes for Night ${nd.n}</div>
+    <textarea class="night-notes" placeholder="What am I feeling tonight? What did Allah open in my heart? What do I want to remember?…" oninput="saveNightNote(${activeNight})">${nightNotes[activeNight]||''}</textarea>
+  `;
+}
+function setNight(n) { activeNight = n; renderPlannerPage(); window.scrollTo(0,0); }
+function toggleAct(night, idx) {
+  if (!nightActivities[night]) nightActivities[night] = {};
+  nightActivities[night][idx] = !nightActivities[night][idx];
+  if (nightActivities[night][idx]) showToast('plan','✅','Done!','Every act of worship tonight is multiplied. Keep going.');
+  renderPlannerPage();
+}
+function saveNightNote(night) {
+  nightNotes[night] = document.getElementById('.night-notes') ?
+    document.querySelector('.night-notes').value : '';
+  try { nightNotes[night] = document.querySelector('.night-notes')?.value || ''; } catch(e){}
+}
+
+// ─── INIT ───
+render();
+</script>
+</body>
+</html>
